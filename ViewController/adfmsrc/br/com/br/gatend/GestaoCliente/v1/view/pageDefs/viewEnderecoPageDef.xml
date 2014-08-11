@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.2.66.68" id="viewEnderecoPageDef"
+                Package="br.com.br.gatend.GestaoCliente.v1.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ArLocationValuesV1" RangeSize="25" DataControl="LocaisAMDataControl"
+              id="ArLocationValuesV1Iterator"/>
+  </executables>
+  <bindings>
+    <list IterBinding="ArLocationValuesV1Iterator" StaticList="false" Uses="LOV_LocationSegmentDescription"
+          id="LocationSegmentDescription" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+  </bindings>
+</pageDefinition>

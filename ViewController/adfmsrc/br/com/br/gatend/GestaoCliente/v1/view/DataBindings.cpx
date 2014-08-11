@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.1.2.66.68" id="DataBindings"
+             SeparateXMLFiles="false" Package="br.com.br.gatend.GestaoCliente.v1.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/JSF/NovoCliente.jsf" usageId="br_com_br_gatend_GestaoCliente_v1_view_NovoClientePageDef"/>
+    <page path="/JSFF/viewDadosBasicos.jsff" usageId="br_com_br_gatend_GestaoCliente_v1_view_viewDadosBasicosPageDef"/>
+    <page path="/JSFF/viewEndereco.jsff" usageId="br_com_br_gatend_GestaoCliente_v1_view_viewEnderecoPageDef"/>
+    <page path="/JSFF/viewDBasicos.jsff" usageId="br_com_br_gatend_GestaoCliente_v1_view_viewDBasicosPageDef"/>
+    <page path="/JSF/Consultar.jsf" usageId="br_com_br_gatend_GestaoCliente_v1_view_ConsultarPageDef"/>
+    <page path="/JSF/Editar.jsf" usageId="br_com_br_gatend_GestaoCliente_v1_view_EditarPageDef"/>
+    <page path="/JSFF/viewComplemento.jsff" usageId="br_com_br_gatend_GestaoCliente_v1_view_viewComplementoPageDef"/>
+    <page path="/JSFF/viewCheckListAud.jsff" usageId="br_com_br_gatend_GestaoCliente_v1_view_viewCheckListAudPageDef"/>
+    <page path="/JSFF/viewEnderecoEdit.jsff" usageId="br_com_br_gatend_GestaoCliente_v1_view_viewEnderecoEditPageDef"/>
+    <page path="/JSFF/viewConsultar.jsff" usageId="br_com_br_gatend_GestaoCliente_v1_view_viewConsultarPageDef"/>
+    <page path="/JSFF/viewAnexo.jsff" usageId="br_com_br_gatend_GestaoCliente_v1_view_viewAnexoPageDef"/>
+    <page path="/JSFF/viewLatitudeLongitude.jsff"
+          usageId="br_com_br_gatend_GestaoCliente_v1_view_viewLatitudeLongitudePageDef"/>
+    <page path="/JSFF/viewDBasicosEditar.jsff"
+          usageId="br_com_br_gatend_GestaoCliente_v1_view_viewDBasicosEditarPageDef"/>
+    <page path="/JSFF/viewGeraisEdit.jsff" usageId="br_com_br_gatend_GestaoCliente_v1_view_viewGeraisEditPageDef"/>
+    <page path="/JSFF/viewTrbutarioEdit.jsff"
+          usageId="br_com_br_gatend_GestaoCliente_v1_view_viewTrbutarioEditPageDef"/>
+    <page path="/JSFF/viewComunicacao.jsff" usageId="br_com_br_gatend_GestaoCliente_v1_view_viewComunicacaoPageDef"/>
+    <page path="/JSF/Index.jsf" usageId="br_com_br_gatend_GestaoCliente_v1_view_IndexPageDef"/>
+    <page path="/JSF/Cancelar.jsf" usageId="br_com_br_gatend_GestaoCliente_v1_view_CancelarPageDef"/>
+    <page path="/JSFF/viewCancelar.jsff" usageId="br_com_br_gatend_GestaoCliente_v1_view_viewCancelarPageDef"/>
+    <page path="/JSFF/viewCancelarEndereco.jsff"
+          usageId="br_com_br_gatend_GestaoCliente_v1_view_viewCancelarEnderecoPageDef"/>
+    <page path="/JSF/teste.jsf" usageId="br_com_br_gatend_GestaoCliente_v1_view_testePageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_NovoClientePageDef"
+          path="br.com.br.gatend.GestaoCliente.v1.view.pageDefs.NovoClientePageDef"/>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_viewDadosBasicosPageDef"
+          path="br.com.br.gatend.GestaoCliente.v1.view.pageDefs.viewDadosBasicosPageDef"/>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_viewEnderecoPageDef"
+          path="br.com.br.gatend.GestaoCliente.v1.view.pageDefs.viewEnderecoPageDef"/>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_viewDBasicosPageDef"
+          path="br.com.br.gatend.GestaoCliente.v1.view.pageDefs.viewDBasicosPageDef"/>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_ConsultarPageDef"
+          path="br.com.br.gatend.GestaoCliente.v1.view.pageDefs.ConsultarPageDef"/>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_EditarPageDef"
+          path="br.com.br.gatend.GestaoCliente.v1.view.pageDefs.EditarPageDef"/>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_viewComplementoPageDef" path="JSFF.viewComplementoPageDef"/>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_viewCheckListAudPageDef" path="JSFF.viewCheckListAudPageDef"/>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_viewEnderecoEditPageDef" path="JSFF.viewEnderecoEditPageDef"/>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_viewConsultarPageDef" path="JSFF.viewConsultarPageDef"/>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_viewAnexoPageDef" path="JSFF.viewAnexoPageDef"/>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_viewLatitudeLongitudePageDef"
+          path="JSFF.viewLatitudeLongitudePageDef"/>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_viewDBasicosEditarPageDef" path="JSFF.viewDBasicosEditarPageDef"/>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_viewGeraisEditPageDef" path="JSFF.viewGeraisEditPageDef"/>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_viewTrbutarioEditPageDef" path="JSFF.viewTrbutarioEditPageDef"/>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_viewComunicacaoPageDef" path="JSFF.viewComunicacaoPageDef"/>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_IndexPageDef" path="JSF.IndexPageDef"/>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_CancelarPageDef" path="JSF.CancelarPageDef"/>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_viewCancelarPageDef" path="JSFF.viewCancelarPageDef"/>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_viewCancelarEnderecoPageDef"
+          path="JSFF.viewCancelarEnderecoPageDef"/>
+    <page id="br_com_br_gatend_GestaoCliente_v1_view_testePageDef" path="JSF.testePageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="ClientesAMDataControl" Package="br.com.br.gatend.GestaoCliente.v1.model.am"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="ClientesAMLocal1" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="ProspectsAMDataControl" Package="br.com.br.gatend.GestaoCliente.v1.model.am"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="ProspectsAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="LocaisAMDataControl" Package="br.com.br.gatend.GestaoCliente.v1.model.am.common"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="LocaisAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="CepAMDataControl" Package="br.com.br.gatend.GestaoCliente.v1.model.am.common"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="CepAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="CheckListDataControl" Package="br.com.br.gatend.GestaoCliente.v1.model.am"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="CheckListLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AnexoAMDataControl" Package="br.com.br.gatend.GestaoCliente.v1.model.am"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AnexoAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="LatitudeLongitudeAMDataControl" Package="br.com.br.gatend.GestaoCliente.v1.model.am"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="LatitudeLongitudeAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="CancelarClienteAMDataControl" Package="br.com.br.gatend.GestaoCliente.v1.model.am"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="CancelarClienteAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

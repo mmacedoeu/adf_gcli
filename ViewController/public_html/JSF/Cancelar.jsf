@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:h="http://java.sun.com/jsf/html">
+    <af:document title="Cancelar.jsf" id="d1" binding="#{backingBeanScope.backing_Cancelar.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_Cancelar.f1}">
+            <af:pageTemplate viewId="/JSF/TemplateBRFocus.jsf" id="pt1"
+                             binding="#{backingBeanScope.backing_Cancelar.pt1}">
+                <f:facet name="rownum1">
+                    <af:region value="#{bindings.taskflowCancelar1.regionModel}" id="r3"
+                               binding="#{backingBeanScope.backing_Cancelar.r3}"/>
+                </f:facet>
+                <f:attribute name="title1" value="Cancelar"/>
+            </af:pageTemplate>
+        </af:form>
+        <c:if test="#{!backingBeanScope.backing_Cancelar.permissao}">
+            <af:showPopupBehavior popupId="popupValidaPrivilegio" triggerType="load"/>
+        </c:if>
+        <af:popup id="popupValidaPrivilegio" contentDelivery="lazy"
+                  binding="#{backingBeanScope.backing_Cancelar.popupValidaPrivilegio}">
+            <af:dialog id="dlgPrivilegio" type="ok" title="Advertência"
+                       dialogListener="#{backingBeanScope.backing_Cancelar.redirectPopupValidaPrivilegio}"
+                       closeIconVisible="false">
+                <af:outputText value="#{backingBeanScope.backing_Cancelar.msgErro}" id="ot3" escape="false"/>
+            </af:dialog>
+        </af:popup>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_Cancelar-->
+</f:view>

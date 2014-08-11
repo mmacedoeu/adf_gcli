@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:f="http://java.sun.com/jsf/core">
+    <c:set var="viewcontrollerBundle"
+           value="#{adfBundle['br.com.br.gatend.GestaoCliente.v1.view.ViewControllerBundle']}"/>
+    <af:panelTabbed id="pt1" binding="#{backingBeanScope.backing_viewComplemento.pt1}">
+        <af:showDetailItem text="#{viewcontrollerBundle.ENDERE_U00E7O}" id="sdi1"
+                           binding="#{backingBeanScope.backing_viewComplemento.sdi1}">
+            <af:region value="#{bindings.taskflowEnderecoEdit1.regionModel}" id="r1"
+                       binding="#{backingBeanScope.backing_viewComplemento.r1}"/>
+        </af:showDetailItem>
+        <af:showDetailItem text="#{viewcontrollerBundle.OBJETIVOS}" id="sdi3"
+                           binding="#{backingBeanScope.backing_viewComplemento.sdi3}"/>
+        <af:showDetailItem text="#{viewcontrollerBundle.TRIBUT_U00E1RIO}" id="sdi4"
+                           binding="#{backingBeanScope.backing_viewComplemento.sdi4}">
+            <af:region value="#{bindings.taskflowTributarioEdit1.regionModel}" id="r3"
+                       binding="#{backingBeanScope.backing_viewComplemento.r3}"/>
+        </af:showDetailItem>
+        <af:showDetailItem text="#{viewcontrollerBundle.GERAIS}" id="sdi2"
+                           binding="#{backingBeanScope.backing_viewComplemento.sdi2}">
+            <af:region value="#{bindings.taskflowGeraisEdit1.regionModel}" id="r2"
+                       binding="#{backingBeanScope.backing_viewComplemento.r2}"/>
+        </af:showDetailItem>
+        <af:showDetailItem text="#{viewcontrollerBundle.COMUNICA_U00E7_U00E3O}" id="sdi5"
+                           binding="#{backingBeanScope.backing_viewComplemento.sdi5}">
+            <af:region value="#{bindings.taskflowComunicacao1.regionModel}" id="r6"
+                       binding="#{backingBeanScope.backing_viewComplemento.r6}"/>
+        </af:showDetailItem>
+        <af:showDetailItem text="GATEND" id="sdi6"
+                           binding="#{backingBeanScope.backing_viewComplemento.sdi6}"/>
+    </af:panelTabbed>
+    <af:panelGroupLayout id="pgl1" binding="#{backingBeanScope.backing_viewComplemento.pgl1}" layout="vertical">
+        <af:panelGroupLayout id="pgl2" binding="#{backingBeanScope.backing_viewComplemento.pgl2}">
+            <af:button text="#{viewcontrollerBundle.SALVAR}" id="b1"
+                       binding="#{backingBeanScope.backing_viewComplemento.b1}"
+                       inlineStyle="font-weight:bold; width:131px; background-color:Black; text-justify:auto; text-align:center;"/>
+            <af:button text="#{viewcontrollerBundle._U00C1REA_DE_VENDAS}" id="b2"
+                       binding="#{backingBeanScope.backing_viewComplemento.b2}"
+                       inlineStyle="font-weight:bold; width:131px; background-color:Black; text-justify:auto; text-align:center;"/>
+            <af:button text="#{viewcontrollerBundle.ENVIAR_APROVA_U00E7_U00E3O}" id="b3"
+                       binding="#{backingBeanScope.backing_viewComplemento.b3}"
+                       inlineStyle="font-weight:bold; width:131px; background-color:Black; text-justify:auto; text-align:center;"/>
+            <af:spacer width="155" height="10" id="s1" binding="#{backingBeanScope.backing_viewComplemento.s1}"/>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="Anexos"
+                      binding="#{backingBeanScope.backing_viewComplemento.p2}">
+                <af:panelWindow id="pw3" binding="#{backingBeanScope.backing_viewComplemento.pw3}">
+                    <af:region value="#{bindings.taskflowAnexo1.regionModel}" id="r7"
+                               binding="#{backingBeanScope.backing_viewComplemento.r7}"/>
+                </af:panelWindow>
+            </af:popup>
+            <af:button text="#{viewcontrollerBundle.ANEXOS}" id="b4"
+                       binding="#{backingBeanScope.backing_viewComplemento.b4}"
+                       inlineStyle="font-weight:bold; width:131px; background-color:Black; text-justify:auto; text-align:center;">
+                <af:showPopupBehavior popupId="Anexos" triggerType="action"/>
+            </af:button>
+            
+            
+            
+            <af:popup childCreation="deferred" autoCancel="disabled" id="LatitudeLongitude" contentDelivery="lazyUncached">
+                <af:panelWindow id="pw2">                    
+                    <af:region value="#{bindings.taskflowLatitudeLongitude1.regionModel}" id="r5" />                               
+                </af:panelWindow>
+            </af:popup>            
+            <af:button text="#{viewcontrollerBundle.LATITUDE_E_LONGITUDE}" id="b5"
+                       inlineStyle="font-weight:bold; width:131px; background-color:Black; text-justify:auto; text-align:center;">
+                <af:showPopupBehavior popupId="LatitudeLongitude" />
+            </af:button>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="ChecList" binding="#{backingBeanScope.backing_viewComplemento.checList}" popupFetchListener="#{backingBeanScope.backing_viewCheckListAud.popupFetchListener}"   >
+                <af:panelWindow id="pw1" 
+                                inlineStyle="background-color:HighlightText;">
+                        <af:region value="#{bindings.taskflowCheckListAud1.regionModel}" id="r4" />                          
+                </af:panelWindow>
+            </af:popup>
+            <af:button text="#{viewcontrollerBundle.CHECKLIST}" id="b6"
+                       inlineStyle="font-weight:bold; width:131px; background-color:Black; text-justify:auto; text-align:center;"
+                       action="#{backingBeanScope.backing_viewComplemento.verificarPrivilegio}">
+                <!--af:showPopupBehavior popupId="ChecList"/-->
+            </af:button>
+            
+            
+            
+            
+            <af:button text="#{viewcontrollerBundle.ALTERA_U00E7_U00F5ES_PENDENTES}" id="b7"
+                       binding="#{backingBeanScope.backing_viewComplemento.b7}"
+                       inlineStyle="font-weight:bold; width:131px; background-color:Black; text-justify:auto; text-align:center;"/>
+        </af:panelGroupLayout>
+    </af:panelGroupLayout>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_viewComplemento-->
+</ui:composition>

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_viewEnderecoEdit-->
+    <af:panelGroupLayout id="pgl1" binding="#{backingBeanScope.backing_viewEnderecoEdit.pgl1}"
+                         inlineStyle="width:995px;" layout="horizontal">
+        <af:panelGroupLayout id="pgl2" binding="#{backingBeanScope.backing_viewEnderecoEdit.pgl2}">
+            <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_viewEnderecoEdit.pfl1}">
+                <f:facet name="footer"/>
+                <af:inputText label="CEP:" id="it1" binding="#{backingBeanScope.backing_viewEnderecoEdit.it1}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"
+                              columns="9" value="#{backingBeanScope.backing_viewEnderecoEdit.cep}"/>
+                <af:inputText label="Logradouro:" id="it2" binding="#{backingBeanScope.backing_viewEnderecoEdit.it2}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"
+                              maximumLength="60" columns="65"
+                              value="#{backingBeanScope.backing_viewEnderecoEdit.logradouro}"/>
+                <af:inputText label="Número" id="it3" binding="#{backingBeanScope.backing_viewEnderecoEdit.it3}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"
+                              columns="10" value="#{backingBeanScope.backing_viewEnderecoEdit.numero}"/>
+                <af:inputText label="Lote:" id="it4" binding="#{backingBeanScope.backing_viewEnderecoEdit.it4}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"
+                              columns="10" value="#{backingBeanScope.backing_viewEnderecoEdit.lote}"/>
+                <af:inputText label="Bairro:" id="it5" binding="#{backingBeanScope.backing_viewEnderecoEdit.it5}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"
+                              columns="45" maximumLength="40"
+                              value="#{backingBeanScope.backing_viewEnderecoEdit.bairro}"/>
+                <af:inputText label="Estado:" id="it6" binding="#{backingBeanScope.backing_viewEnderecoEdit.it6}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"
+                              value="#{backingBeanScope.backing_viewEnderecoEdit.estado}"/>
+                <af:inputText label="Município:" id="it7" binding="#{backingBeanScope.backing_viewEnderecoEdit.it7}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"
+                              value="#{backingBeanScope.backing_viewEnderecoEdit.cidade}"/>
+                <af:selectOneChoice value="#{applicationScope.editarBacking.pais}"
+                                    label="#{bindings.LocationSegmentDescription.label}"
+                                    required="#{bindings.LocationSegmentDescription.hints.mandatory}"
+                                    shortDesc="#{bindings.LocationSegmentDescription.hints.tooltip}" id="soc2"
+                                    contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                    binding="#{backingBeanScope.backing_viewEnderecoEdit.soc2}"
+                                    valueChangeListener="#{backingBeanScope.backing_viewEnderecoEdit.valueChanged}"
+                                    autoSubmit="true">
+                    <f:selectItems value="#{bindings.LocationSegmentDescription.items}" id="si2"
+                                   binding="#{backingBeanScope.backing_viewEnderecoEdit.si2}"/>
+                    <f:validator binding="#{bindings.LocationSegmentDescription.validator}"/>
+                </af:selectOneChoice>
+            </af:panelFormLayout>
+        </af:panelGroupLayout>
+        <af:panelGroupLayout id="pgl3" binding="#{backingBeanScope.backing_viewEnderecoEdit.pgl3}">
+            <af:panelFormLayout id="pfl2" binding="#{backingBeanScope.backing_viewEnderecoEdit.pfl2}">
+                <f:facet name="footer"/>
+                <af:inputText label="Complemento:" id="it9" binding="#{backingBeanScope.backing_viewEnderecoEdit.it9}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"
+                              value="#{backingBeanScope.backing_viewEnderecoEdit.complemento}"/>
+                <af:inputText label="Quadra:" id="it10" binding="#{backingBeanScope.backing_viewEnderecoEdit.it10}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"
+                              columns="10" value="#{backingBeanScope.backing_viewEnderecoEdit.quadra}"/>
+            </af:panelFormLayout>
+        </af:panelGroupLayout>
+    </af:panelGroupLayout>
+</ui:composition>

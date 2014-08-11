@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="Index.jsf" id="d1" binding="#{backingBeanScope.backing_Index2.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_Index2.f1}">
+            <af:pageTemplate viewId="/JSF/TemplateBRFocus.jsf" id="pt1" binding="#{backingBeanScope.backing_Index2.pt1}">
+                <f:facet name="rownum1">
+                    <af:region value="#{bindings.taskflowboasVindas1.regionModel}" id="r1"
+                               binding="#{backingBeanScope.backing_Index2.r1}"/>
+                </f:facet>
+                <f:facet name="rownum2"/>
+                <f:facet name="center"/>
+                <f:attribute name="title1" value="  "/>
+                <f:attribute name="title2" value="   "/>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_Index2-->
+</f:view>

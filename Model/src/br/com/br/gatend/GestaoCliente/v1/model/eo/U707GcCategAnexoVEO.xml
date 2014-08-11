@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="U707GcCategAnexoVEO"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="GCL.U707_GC_CATEG_ANEXO_V"
+  AliasName="U707GcCategAnexoVEO"
+  BindingStyle="OracleName"
+  RowClass="br.com.br.gatend.GestaoCliente.v1.model.eo.U707GcCategAnexoVEOImpl">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Attribute
+    Name="CategoryId"
+    IsNotNull="true"
+    ColumnName="CATEGORY_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="GCL.U707_GC_CATEG_ANEXO_V"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="FunctionName"
+    IsNotNull="true"
+    Precision="30"
+    ColumnName="FUNCTION_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="GCL.U707_GC_CATEG_ANEXO_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="FunctionType"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="FUNCTION_TYPE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="GCL.U707_GC_CATEG_ANEXO_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Categoria"
+    IsNotNull="true"
+    Precision="255"
+    ColumnName="CATEGORIA"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="GCL.U707_GC_CATEG_ANEXO_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="255"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="U707gccateganexoveoPrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="U707GCCATEGANEXOVEO_PRIMARY_KE"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="br.com.br.gatend.GestaoCliente.v1.model.eo.U707GcCategAnexoVEO.CategoryId"/>
+    </AttrArray>
+  </Key>
+</Entity>

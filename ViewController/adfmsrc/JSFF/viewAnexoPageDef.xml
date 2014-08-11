@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.2.66.68" id="viewAnexoPageDef"
+                Package="JSFF">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ClienteVO1" RangeSize="25" DataControl="AnexoAMDataControl" id="ClienteVO1Iterator"/>
+    <iterator Binds="CategoriaVO1" RangeSize="25" DataControl="AnexoAMDataControl" id="CategoriaVO1Iterator"/>
+    <iterator Binds="ListaAnexosVO1" RangeSize="25" DataControl="AnexoAMDataControl" id="ListaAnexosVO1Iterator"/>
+    <searchRegion Binds="ListaAnexosVO1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="ListaAnexosVO1Query"/>
+    <iterator Binds="U707GcAnexoVVO1" RangeSize="10" DataControl="AnexoAMDataControl" id="U707GcAnexoVVO1Iterator"/>
+    <iterator Binds="U707GcCategAnexoVVO1" RangeSize="10" DataControl="AnexoAMDataControl"
+              id="U707GcCategAnexoVVO1Iterator"/>
+    <iterator Binds="ListaAnexoVO1" RangeSize="10" DataControl="AnexoAMDataControl" id="ListaAnexoVO1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="ClienteVO1Iterator" id="Codigo">
+      <AttrNames>
+        <Item Value="Codigo"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="CategoriaVO1Iterator" ListOperMode="navigation" ListIter="CategoriaVO1Iterator"
+          id="CategoriaVO1" DTSupportsMRU="true" SelectItemValueMode="ListObject">
+      <AttrNames>
+        <Item Value="Descricao"/>
+      </AttrNames>
+    </list>
+    <tree IterBinding="U707GcAnexoVVO1Iterator" id="U707GcAnexoVVO1">
+      <nodeDefinition DefName="br.com.br.gatend.GestaoCliente.v1.model.vo.U707GcAnexoVVO" Name="U707GcAnexoVVO10">
+        <AttrNames>
+          <Item Value="AttachedDocumentId"/>
+          <Item Value="AutomaticallyAddedFlag"/>
+          <Item Value="CategoryDescription"/>
+          <Item Value="CategoryId"/>
+          <Item Value="Column1"/>
+          <Item Value="CreatedBy"/>
+          <Item Value="CreationDate"/>
+          <Item Value="DatatypeId"/>
+          <Item Value="DatatypeName"/>
+          <Item Value="DocumentDescription"/>
+          <Item Value="DocumentId"/>
+          <Item Value="EndDateActive"/>
+          <Item Value="EntityName"/>
+          <Item Value="FileName"/>
+          <Item Value="ImageType"/>
+          <Item Value="LastUpdateDate"/>
+          <Item Value="LastUpdatedBy"/>
+          <Item Value="LastUpdateLogin"/>
+          <Item Value="MediaId"/>
+          <Item Value="Pk1Value"/>
+          <Item Value="Pk2Value"/>
+          <Item Value="Pk3Value"/>
+          <Item Value="Pk4Value"/>
+          <Item Value="Pk5Value"/>
+          <Item Value="PublishFlag"/>
+          <Item Value="SecurityId"/>
+          <Item Value="SecurityType"/>
+          <Item Value="SeqNum"/>
+          <Item Value="StartDateActive"/>
+          <Item Value="UsageType"/>
+          <Item Value="UserEntityName"/>
+          <Item Value="UserEntityPrompt"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <methodAction id="pesquisarAnexosPorCliente" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="pesquisarAnexosPorCliente" IsViewObjectMethod="false" DataControl="AnexoAMDataControl"
+                  InstanceName="data.AnexoAMDataControl.dataProvider">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+    <tree IterBinding="U707GcAnexoVVO1Iterator" id="U707GcAnexoVVO11">
+      <nodeDefinition DefName="br.com.br.gatend.GestaoCliente.v1.model.vo.U707GcAnexoVVO" Name="U707GcAnexoVVO110">
+        <AttrNames>
+          <Item Value="SeqNum"/>
+          <Item Value="CategoryDescription"/>
+          <Item Value="DocumentDescription"/>
+          <Item Value="FileName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <list IterBinding="U707GcCategAnexoVVO1Iterator" ListOperMode="navigation" ListIter="U707GcCategAnexoVVO1Iterator"
+          id="U707GcCategAnexoVVO1" DTSupportsMRU="true" SelectItemValueMode="ListObject">
+      <AttrNames>
+        <Item Value="Categoria"/>
+      </AttrNames>
+    </list>
+    <methodAction id="pesquisarAnexoPorId" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="pesquisarAnexoPorId" IsViewObjectMethod="false" DataControl="AnexoAMDataControl"
+                  InstanceName="data.AnexoAMDataControl.dataProvider"
+                  ReturnName="data.AnexoAMDataControl.methodResults.pesquisarAnexoPorId_AnexoAMDataControl_dataProvider_pesquisarAnexoPorId_result">
+      <NamedData NDName="id" NDType="java.lang.String"/>
+    </methodAction>
+    <methodAction id="buscaDadosCliente" RequiresUpdateModel="true" Action="invokeMethod" MethodName="buscaDadosCliente"
+                  IsViewObjectMethod="false" DataControl="AnexoAMDataControl"
+                  InstanceName="data.AnexoAMDataControl.dataProvider"
+                  ReturnName="data.AnexoAMDataControl.methodResults.buscaDadosCliente_AnexoAMDataControl_dataProvider_buscaDadosCliente_result">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+    <methodAction id="retornaNumeroSequecial" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="retornaNumeroSequecial" IsViewObjectMethod="false" DataControl="AnexoAMDataControl"
+                  InstanceName="data.AnexoAMDataControl.dataProvider"
+                  ReturnName="data.AnexoAMDataControl.methodResults.retornaNumeroSequecial_AnexoAMDataControl_dataProvider_retornaNumeroSequecial_result">
+      <NamedData NDName="codigoCliente" NDType="java.lang.String"/>
+    </methodAction>
+    <tree IterBinding="ListaAnexoVO1Iterator" id="ListaAnexoVO1">
+      <nodeDefinition DefName="br.com.br.gatend.GestaoCliente.v1.model.vo.ListaAnexoVO" Name="ListaAnexoVO10">
+        <AttrNames>
+          <Item Value="Sequencial"/>
+          <Item Value="Categoria"/>
+          <Item Value="Descricao"/>
+          <Item Value="NomeArquivo"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action id="Rollback" DataControl="AnexoAMDataControl" RequiresUpdateModel="false" Action="rollbackTransaction"/>
+    <methodAction id="salvaAnexo" RequiresUpdateModel="true" Action="invokeMethod" MethodName="salvaAnexo"
+                  IsViewObjectMethod="false" DataControl="AnexoAMDataControl"
+                  InstanceName="data.AnexoAMDataControl.dataProvider"
+                  ReturnName="data.AnexoAMDataControl.methodResults.salvaAnexo_AnexoAMDataControl_dataProvider_salvaAnexo_result">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+    <methodAction id="removerAnexo" RequiresUpdateModel="true" Action="invokeMethod" MethodName="removerAnexo"
+                  IsViewObjectMethod="false" DataControl="AnexoAMDataControl"
+                  InstanceName="data.AnexoAMDataControl.dataProvider"
+                  ReturnName="data.AnexoAMDataControl.methodResults.removerAnexo_AnexoAMDataControl_dataProvider_removerAnexo_result">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+    <action IterBinding="ListaAnexoVO1Iterator" id="CreateWithParams" InstanceName="AnexoAMDataControl.ListaAnexoVO1"
+            DataControl="AnexoAMDataControl" RequiresUpdateModel="true" Action="createWithParams">
+      <NamedData NDName="Sequencial" NDType="java.lang.String"/>
+      <NamedData NDName="NomeArquivo" NDType="java.lang.String"/>
+      <NamedData NDName="Categoria" NDType="java.lang.String"/>
+      <NamedData NDName="Descricao" NDType="java.lang.String"/>
+      <NamedData NDName="MediaId" NDType="java.lang.String"/>
+      <NamedData NDName="IndIncluir" NDType="java.lang.String"/>
+      <NamedData NDName="IndExcluir" NDType="java.lang.String"/>
+    </action>
+  </bindings>
+</pageDefinition>

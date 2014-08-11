@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.ClientesAM">
+      <AppModuleConfig name="ClientesAMLocal" jbo.project="br.com.br.gatend.GestaoCliente.v1.model.Model" ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.ClientesAM" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="br.com.br.gatend.GestaoCliente.v1.model.am.ClientesAM"/>
+         <Custom ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="jdbc/FocusDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="ClientesAMShared" jbo.project="br.com.br.gatend.GestaoCliente.v1.model.Model" ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.ClientesAM" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory">
+         <AM-Pooling jbo.ampool.isuseexclusive="false" jbo.ampool.maxpoolsize="1"/>
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="br.com.br.gatend.GestaoCliente.v1.model.am.ClientesAM"/>
+         <Custom ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="jdbc/FocusDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.ClientesAM">
+      <AppModuleConfig name="ClientesAMLocal1" jbo.project="br.com.br.gatend.GestaoCliente.v1.model.Model" ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.ClientesAM" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="br.com.br.gatend.GestaoCliente.v1.model.am.ClientesAM"/>
+         <Custom ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="jdbc/FocusDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="ClientesAMShared1" jbo.project="br.com.br.gatend.GestaoCliente.v1.model.Model" ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.ClientesAM" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory">
+         <AM-Pooling jbo.ampool.isuseexclusive="false" jbo.ampool.maxpoolsize="1"/>
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="br.com.br.gatend.GestaoCliente.v1.model.am.ClientesAM"/>
+         <Custom ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="jdbc/FocusDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.ProspectsAM">
+      <AppModuleConfig name="ProspectsAMLocal" jbo.project="br.com.br.gatend.GestaoCliente.v1.model.Model" ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.ProspectsAM" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="br.com.br.gatend.GestaoCliente.v1.model.am.ProspectsAM"/>
+         <Custom ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="jdbc/FocusDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="ProspectsAMShared" jbo.project="br.com.br.gatend.GestaoCliente.v1.model.Model" ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.ProspectsAM" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory">
+         <AM-Pooling jbo.ampool.isuseexclusive="false" jbo.ampool.maxpoolsize="1"/>
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="br.com.br.gatend.GestaoCliente.v1.model.am.ProspectsAM"/>
+         <Custom ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="jdbc/FocusDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.CheckList">
+      <AppModuleConfig name="CheckListLocal" jbo.project="br.com.br.gatend.GestaoCliente.v1.model.Model" ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.CheckList" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="br.com.br.gatend.GestaoCliente.v1.model.am.CheckList"/>
+         <Custom ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="jdbc/FocusDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="CheckListShared" jbo.project="br.com.br.gatend.GestaoCliente.v1.model.Model" ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.CheckList" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory">
+         <AM-Pooling jbo.ampool.isuseexclusive="false" jbo.ampool.maxpoolsize="1"/>
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="br.com.br.gatend.GestaoCliente.v1.model.am.CheckList"/>
+         <Custom ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="jdbc/FocusDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.AnexoAM">
+      <AppModuleConfig name="AnexoAMLocal" jbo.project="br.com.br.gatend.GestaoCliente.v1.model.Model" ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.AnexoAM" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="br.com.br.gatend.GestaoCliente.v1.model.am.AnexoAM"/>
+         <Custom ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="jdbc/FocusDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="AnexoAMShared" jbo.project="br.com.br.gatend.GestaoCliente.v1.model.Model" ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.AnexoAM" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="br.com.br.gatend.GestaoCliente.v1.model.am.AnexoAM"/>
+         <Custom ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="jdbc/FocusDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.LatitudeLongitudeAM">
+      <AppModuleConfig DeployPlatform="LOCAL" name="LatitudeLongitudeAMLocal" ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.LatitudeLongitudeAM" jbo.project="br.com.br.gatend.GestaoCliente.v1.model.Model">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="br.com.br.gatend.GestaoCliente.v1.model.am.LatitudeLongitudeAM"/>
+         <Custom ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="jdbc/FocusDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="LatitudeLongitudeAMShared" jbo.project="br.com.br.gatend.GestaoCliente.v1.model.Model" ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.LatitudeLongitudeAM" DeployPlatform="LOCAL">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="br.com.br.gatend.GestaoCliente.v1.model.am.LatitudeLongitudeAM"/>
+         <Custom ns0:JDBCDataSource="jdbc/FocusDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.CancelarClienteAM">
+      <AppModuleConfig DeployPlatform="LOCAL" name="CancelarClienteAMLocal" ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.CancelarClienteAM" jbo.project="br.com.br.gatend.GestaoCliente.v1.model.Model">
+         <Database jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="br.com.br.gatend.GestaoCliente.v1.model.am.CancelarClienteAM"/>
+         <Custom ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="jdbc/FocusDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig DeployPlatform="LOCAL" name="CancelarClienteAMShared" ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.CancelarClienteAM" jbo.project="br.com.br.gatend.GestaoCliente.v1.model.Model">
+         <AM-Pooling jbo.ampool.isuseexclusive="false" jbo.ampool.resetnontransactionalstate="false" jbo.ampool.dynamicjdbccredentials="false" jbo.ampool.maxpoolsize="1"/>
+         <Database jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="br.com.br.gatend.GestaoCliente.v1.model.am.CancelarClienteAM"/>
+         <Custom ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="jdbc/FocusDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.NovoClienteAM">
+      <AppModuleConfig name="NovoClienteAMLocal" ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.NovoClienteAM" DeployPlatform="LOCAL" jbo.project="br.com.br.gatend.GestaoCliente.v1.model.Model">
+         <Security AppModuleJndiName="br.com.br.gatend.GestaoCliente.v1.model.am.NovoClienteAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/CRP3DS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="NovoClienteAMShared" ApplicationName="br.com.br.gatend.GestaoCliente.v1.model.am.NovoClienteAM" DeployPlatform="LOCAL" jbo.project="br.com.br.gatend.GestaoCliente.v1.model.Model">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Security AppModuleJndiName="br.com.br.gatend.GestaoCliente.v1.model.am.NovoClienteAM"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/CRP3DS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

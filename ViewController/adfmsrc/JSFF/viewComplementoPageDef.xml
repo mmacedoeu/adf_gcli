@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.2.66.68" id="viewComplementoPageDef"
+                Package="JSFF">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="taskflowEnderecoEdit1" taskFlowId="/WEB-INF/task-flow-EnderecoEdit.xml#task-flow-EnderecoEdit"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="taskflowGeraisEdit1" taskFlowId="/WEB-INF/task-flow-GeraisEdit.xml#task-flow-GeraisEdit"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="taskflowTributarioEdit1" taskFlowId="/WEB-INF/task-flow-TributarioEdit.xml#task-flow-TributarioEdit"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="taskflowCheckListAud1" taskFlowId="/WEB-INF/task-flow-CheckListAud.xml#task-flow-CheckListAud"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="taskflowComunicacao1" taskFlowId="/WEB-INF/task-flow-Comunicacao.xml#task-flow-Comunicacao"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="taskflowAnexo1" taskFlowId="/WEB-INF/task-flow-Anexo.xml#task-flow-Anexo" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="taskflowLatitudeLongitude1"
+              taskFlowId="/WEB-INF/task-flow-LatitudeLongitude.xml#task-flow-LatitudeLongitude" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+  </executables>
+  <bindings>
+    <methodAction id="consultarLatitudeLogitude" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="consultarLatitudeLogitude" IsViewObjectMethod="false"
+                  DataControl="LatitudeLongitudeAMDataControl"
+                  InstanceName="data.LatitudeLongitudeAMDataControl.dataProvider">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+    <methodAction id="verificaPrivilegioGestaoClientes" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="verificaPrivilegioGestaoClientes" IsViewObjectMethod="false"
+                  DataControl="CheckListDataControl" InstanceName="data.CheckListDataControl.dataProvider"
+                  ReturnName="data.CheckListDataControl.methodResults.verificaPrivilegioGestaoClientes_CheckListDataControl_dataProvider_verificaPrivilegioGestaoClientes_result">
+      <NamedData NDName="userName" NDType="java.lang.String"/>
+    </methodAction>
+    <methodAction id="verificaPrivilegioConsultarAlterarItensVerificacao" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="verificaPrivilegioConsultarAlterarItensVerificacao"
+                  IsViewObjectMethod="false" DataControl="CheckListDataControl"
+                  InstanceName="data.CheckListDataControl.dataProvider"
+                  ReturnName="data.CheckListDataControl.methodResults.verificaPrivilegioConsultarAlterarItensVerificacao_CheckListDataControl_dataProvider_verificaPrivilegioConsultarAlterarItensVerificacao_result">
+      <NamedData NDName="userName" NDType="java.lang.String"/>
+    </methodAction>
+    <methodAction id="verificaPossuiCodigoDefinitivo" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="verificaPossuiCodigoDefinitivo" IsViewObjectMethod="false"
+                  DataControl="CheckListDataControl" InstanceName="data.CheckListDataControl.dataProvider"
+                  ReturnName="data.CheckListDataControl.methodResults.verificaPossuiCodigoDefinitivo_CheckListDataControl_dataProvider_verificaPossuiCodigoDefinitivo_result">
+      <NamedData NDName="partySiteId" NDType="java.lang.String"/>
+    </methodAction>
+    <methodAction id="buscaChecklistsAuditoria" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="buscaChecklistsAuditoria" IsViewObjectMethod="false" DataControl="CheckListDataControl"
+                  InstanceName="data.CheckListDataControl.dataProvider"
+                  ReturnName="data.CheckListDataControl.methodResults.buscaChecklistsAuditoria_CheckListDataControl_dataProvider_buscaChecklistsAuditoria_result">
+      <NamedData NDName="numPartySiteId" NDType="java.lang.Long"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>

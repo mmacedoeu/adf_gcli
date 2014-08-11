@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="U536BrCepV"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="PORTALBR.U536_BR_CEP_V"
+  AliasName="U536BrCepV"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="CepTipEndereco"
+    Precision="10"
+    ColumnName="CEP_TIP_ENDERECO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PORTALBR.U536_BR_CEP_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CepUniFdt"
+    Precision="2"
+    ColumnName="CEP_UNI_FDT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PORTALBR.U536_BR_CEP_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="2"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CepTipLocalidade"
+    Precision="100"
+    ColumnName="CEP_TIP_LOCALIDADE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PORTALBR.U536_BR_CEP_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CepNomLocalidade"
+    Precision="72"
+    ColumnName="CEP_NOM_LOCALIDADE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PORTALBR.U536_BR_CEP_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="72"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CepNomBairro"
+    Precision="72"
+    ColumnName="CEP_NOM_BAIRRO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PORTALBR.U536_BR_CEP_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="72"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CepSrvCaxPostal"
+    Precision="8"
+    Scale="0"
+    ColumnName="CEP_SRV_CAX_POSTAL"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="PORTALBR.U536_BR_CEP_V"/>
+  <Attribute
+    Name="CepNomTipo"
+    Precision="100"
+    ColumnName="CEP_NOM_TIPO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PORTALBR.U536_BR_CEP_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CepEndTipo"
+    Precision="100"
+    ColumnName="CEP_END_TIPO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PORTALBR.U536_BR_CEP_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CepTipLogradouro"
+    Precision="36"
+    ColumnName="CEP_TIP_LOGRADOURO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PORTALBR.U536_BR_CEP_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="36"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CepNomLogradouro"
+    Precision="100"
+    ColumnName="CEP_NOM_LOGRADOURO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PORTALBR.U536_BR_CEP_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CepTxtComplemento"
+    Precision="100"
+    ColumnName="CEP_TXT_COMPLEMENTO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PORTALBR.U536_BR_CEP_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CepNumCep"
+    Precision="8"
+    ColumnName="CEP_NUM_CEP"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PORTALBR.U536_BR_CEP_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="8"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RowID"
+    IsUpdateable="false"
+    ColumnName="ROWID"
+    SQLType="ROWID"
+    Type="oracle.jbo.domain.RowID"
+    ColumnType="ROWID"
+    PrimaryKey="true"/>
+</Entity>

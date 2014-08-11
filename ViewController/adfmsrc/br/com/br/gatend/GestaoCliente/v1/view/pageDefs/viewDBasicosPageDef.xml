@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.2.66.68" id="viewDBasicosPageDef"
+                Package="br.com.br.gatend.GestaoCliente.v1.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="FndLookupValue1" RangeSize="25" DataControl="ClientesAMDataControl" id="FndLookupValue1Iterator"/>
+    <iterator Binds="FndLookupGerDirVO1" RangeSize="25" DataControl="ClientesAMDataControl"
+              id="FndLookupGerDirVO1Iterator"/>
+    <iterator Binds="FndFormaTratamentoVO1" RangeSize="25" DataControl="ClientesAMDataControl"
+              id="FndFormaTratamentoVO1Iterator"/>
+  </executables>
+  <bindings>
+    <list IterBinding="FndLookupValue1Iterator" StaticList="false" Uses="LOV_Description" id="Description"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <list IterBinding="FndLookupGerDirVO1Iterator" ListOperMode="navigation" ListIter="FndLookupGerDirVO1Iterator"
+          id="FndLookupGerDirVO1" DTSupportsMRU="true" SelectItemValueMode="ListObject">
+      <AttrNames>
+        <Item Value="Meaning"/>
+      </AttrNames>
+    </list>
+    <list IterBinding="FndFormaTratamentoVO1Iterator" ListOperMode="navigation" ListIter="FndFormaTratamentoVO1Iterator"
+          id="FndFormaTratamentoVO1" DTSupportsMRU="true" SelectItemValueMode="ListObject">
+      <AttrNames>
+        <Item Value="Meaning"/>
+      </AttrNames>
+    </list>
+  </bindings>
+</pageDefinition>

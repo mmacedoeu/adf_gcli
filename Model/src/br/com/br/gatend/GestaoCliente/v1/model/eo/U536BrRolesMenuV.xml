@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="U536BrRolesMenuV"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="U536_BR_ROLES_MENU_V"
+  AliasName="U536BrRolesMenuV"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="UserName"
+    IsNotNull="true"
+    Precision="320"
+    ColumnName="USER_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="U536_BR_ROLES_MENU_V"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="320"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RoleName"
+    IsNotNull="true"
+    Precision="360"
+    ColumnName="ROLE_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="U536_BR_ROLES_MENU_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="360"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RoleCode"
+    IsNotNull="true"
+    Precision="320"
+    ColumnName="ROLE_CODE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="U536_BR_ROLES_MENU_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="320"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="U536brrolesmenuvPrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="U536BRROLESMENUV_PRIMARY_KEY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="br.com.br.gatend.GestaoCliente.v1.model.eo.U536BrRolesMenuV.UserName"/>
+    </AttrArray>
+  </Key>
+</Entity>

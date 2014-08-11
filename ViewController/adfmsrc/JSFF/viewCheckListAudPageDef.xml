@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.2.66.68" id="viewCheckListAudPageDef"
+                Package="JSFF">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="U707GcJustChecklistVVO1" RangeSize="25" DataControl="CheckListDataControl"
+              id="U707GcJustChecklistVVO1Iterator"/>
+    <iterator Binds="ListaChecklistVO1" RangeSize="25" DataControl="CheckListDataControl"
+              id="ListaChecklistVO1Iterator"/>
+    <iterator Binds="U536_CheckList1" RangeSize="10" DataControl="CheckListDataControl" id="U536_CheckList1Iterator"/>
+  </executables>
+  <bindings>
+    <methodAction id="buscaChecklistsAuditoria" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="buscaChecklistsAuditoria" IsViewObjectMethod="false" DataControl="CheckListDataControl"
+                  InstanceName="data.CheckListDataControl.dataProvider"
+                  ReturnName="data.CheckListDataControl.methodResults.buscaChecklistsAuditoria_CheckListDataControl_dataProvider_buscaChecklistsAuditoria_result">
+      <NamedData NDName="numPartySiteId" NDType="java.lang.Long"/>
+    </methodAction>
+    <methodAction id="salvar" RequiresUpdateModel="true" Action="invokeMethod" MethodName="salvar"
+                  IsViewObjectMethod="false" DataControl="CheckListDataControl"
+                  InstanceName="data.CheckListDataControl.dataProvider">
+      <NamedData NDName="listaChecklistAud" NDType="java.util.List"/>
+      <NamedData NDName="partySiteId" NDType="java.lang.String"/>
+    </methodAction>
+    <list IterBinding="U707GcJustChecklistVVO1Iterator" ListOperMode="multiSelect"
+          ListIter="U707GcJustChecklistVVO1Iterator" id="U707GcJustChecklistVVO1" SelectItemValueMode="ListObject">
+      <AttrNames>
+        <Item Value="LookupCode"/>
+      </AttrNames>
+      <ListDisplayAttrNames>
+        <Item Value="Description"/>
+      </ListDisplayAttrNames>
+    </list>
+    <tree IterBinding="ListaChecklistVO1Iterator" id="ListaChecklistVO1">
+      <nodeDefinition DefName="br.com.br.gatend.GestaoCliente.v1.model.vo.ListaChecklistVO" Name="ListaChecklistVO10">
+        <AttrNames>
+          <Item Value="Checked"/>
+          <Item Value="Meaning"/>
+          <Item Value="LastUpdateBy"/>
+          <Item Value="ChecTxtJus"/>
+          <Item Value="UserName"/>
+          <Item Value="LastUpdateDate"/>
+          <Item Value="PartySiteId"/>
+          <Item Value="ChecChvChecklist"/>
+          <Item Value="ChecCodItemAud"/>
+          <Item Value="ChecIndVer"/>
+          <Item Value="LookupCode"/>
+          <Item Value="SelectedJustificativa"/>
+          <Item Value="StoredJustificativa"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="U536_CheckList1Iterator" id="U536_CheckList1">
+      <nodeDefinition DefName="br.com.br.gatend.GestaoCliente.v1.model.vo.U536_CheckList" Name="U536_CheckList10">
+        <AttrNames>
+          <Item Value="LookupCode"/>
+          <Item Value="Description"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

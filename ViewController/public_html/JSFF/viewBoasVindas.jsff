@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_viewBoasVindas.pgl1}">
+        <af:gridRow marginTop="5px" height="auto" id="gr1"
+                    binding="#{backingBeanScope.backing_viewBoasVindas.gr1}">
+            <af:gridCell marginStart="5px" width="100%" id="gc1"
+                         binding="#{backingBeanScope.backing_viewBoasVindas.gc1}" halign="center">
+                <af:panelHeader text="BEM VINDO AO CRM - GESTÃO DE CLIENTES" id="ph1"
+                                binding="#{backingBeanScope.backing_viewBoasVindas.ph1}"
+                                inlineStyle="flex-align:start;">
+                    <f:facet name="context"/>
+                    <f:facet name="menuBar"/>
+                    <f:facet name="toolbar"/>
+                    <f:facet name="legend"/>
+                    <f:facet name="info"/>
+                    <af:spacer width="10" height="20" id="s1" binding="#{backingBeanScope.backing_viewBoasVindas.s1}"/>
+                    <af:outputFormatted value=" Selecione a funcionalidade de seu interesse. " id="of1"
+                                        binding="#{backingBeanScope.backing_viewBoasVindas.of1}"
+                                        inlineStyle="font-size:small;font-family:sans-serif;"/>
+                </af:panelHeader>
+            </af:gridCell>
+        </af:gridRow>
+    </af:panelGridLayout>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_viewBoasVindas-->
+</ui:composition>

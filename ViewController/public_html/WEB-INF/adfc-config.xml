@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <managed-bean id="__1">
+    <managed-bean-name>backing_Index</managed-bean-name>
+    <managed-bean-class>br.com.br.gatend.GestaoCliente.v1.view.backing.Index</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1JSF/Index.jsf-->
+  </managed-bean>
+  <managed-bean id="__2">
+    <managed-bean-name>backing_Novo</managed-bean-name>
+    <managed-bean-class>br.com.br.gatend.GestaoCliente.v1.view.backing.Novo</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1Novo.jsf-->
+  </managed-bean>
+  <managed-bean id="__3">
+    <managed-bean-name>backing_NovoCliente</managed-bean-name>
+    <managed-bean-class>br.com.br.gatend.GestaoCliente.v1.view.backing.NovoCliente</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1JSF/NovoCliente.jsf-->
+  </managed-bean>
+  <managed-bean id="__4">
+    <managed-bean-name>backing_Consultar</managed-bean-name>
+    <managed-bean-class>br.com.br.gatend.GestaoCliente.v1.view.backing.Consultar</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1JSF/Consultar.jsf-->
+  </managed-bean>
+  <managed-bean id="__5">
+    <managed-bean-name>backing_METAINF_untitled1</managed-bean-name>
+    <managed-bean-class>br.com.br.gatend.GestaoCliente.v1.view.backing.METAINF.Untitled1</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1META-INF/untitled1.jsf-->
+  </managed-bean>
+  <managed-bean id="__6">
+    <managed-bean-name>backing_Index2</managed-bean-name>
+    <managed-bean-class>br.com.br.gatend.GestaoCliente.v1.view.backing.Index</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1JSF/Index.jsf-->
+  </managed-bean>
+  <managed-bean id="__7">
+    <managed-bean-name>backing_Editar</managed-bean-name>
+    <managed-bean-class>br.com.br.gatend.GestaoCliente.v1.view.backing.Editar</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1JSF/Editar.jsf-->
+  </managed-bean>
+  <managed-bean id="__8">
+    <managed-bean-name>backing_viewAnexo</managed-bean-name>
+    <managed-bean-class>br.com.br.gatend.GestaoCliente.v1.view.backing.ViewAnexo</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1JSFF/viewAnexo.jsff-->
+  </managed-bean>
+  <managed-bean id="__9">
+    <managed-bean-name>backing_viewBoasVindas</managed-bean-name>
+    <managed-bean-class>br.com.br.gatend.GestaoCliente.v1.view.backing.ViewBoasVindas</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1JSFF/viewBoasVindas.jsff-->
+  </managed-bean>
+  <managed-bean id="__10">
+    <managed-bean-name>backing_Cancelar</managed-bean-name>
+    <managed-bean-class>br.com.br.gatend.GestaoCliente.v1.view.backing.Cancelar</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1JSF/Cancelar.jsf-->
+  </managed-bean>
+  <managed-bean id="__11">
+    <managed-bean-name>backing_viewCancelar</managed-bean-name>
+    <managed-bean-class>br.com.br.gatend.GestaoCliente.v1.view.backing.ViewCancelar</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1JSFF/viewCancelar.jsff-->
+  </managed-bean>
+  <managed-bean id="__12">
+    <managed-bean-name>backing_viewCancelarEndereco</managed-bean-name>
+    <managed-bean-class>br.com.br.gatend.GestaoCliente.v1.view.backing.ViewCancelarEndereco</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1JSFF/viewCancelarEndereco.jsff-->
+  </managed-bean>
+  <managed-bean id="__13">
+    <managed-bean-name>templateMB</managed-bean-name>
+    <managed-bean-class>br.com.br.gatend.GestaoCliente.v1.view.backing.templateMB</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+</adfc-config>

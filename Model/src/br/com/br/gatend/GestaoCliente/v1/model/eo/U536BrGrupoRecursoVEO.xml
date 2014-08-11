@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="U536BrGrupoRecursoVEO"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="U536_BR_GRUPO_RECURSO_V"
+  AliasName="U536BrGrupoRecursoVEO"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="PersonId"
+    ColumnName="PERSON_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="U536_BR_GRUPO_RECURSO_V"/>
+  <Attribute
+    Name="SourceFirstName"
+    Precision="360"
+    ColumnName="SOURCE_FIRST_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="U536_BR_GRUPO_RECURSO_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="360"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="SourceLastName"
+    Precision="360"
+    ColumnName="SOURCE_LAST_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="U536_BR_GRUPO_RECURSO_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="360"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="UserId"
+    IsNotNull="true"
+    Precision="15"
+    Scale="0"
+    ColumnName="USER_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="U536_BR_GRUPO_RECURSO_V"/>
+  <Attribute
+    Name="UserName"
+    IsNotNull="true"
+    Precision="100"
+    ColumnName="USER_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="U536_BR_GRUPO_RECURSO_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="GroupId"
+    IsNotNull="true"
+    ColumnName="GROUP_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="U536_BR_GRUPO_RECURSO_V"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="GroupName"
+    IsNotNull="true"
+    Precision="60"
+    ColumnName="GROUP_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="U536_BR_GRUPO_RECURSO_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="60"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Attribute1"
+    Precision="150"
+    ColumnName="ATTRIBUTE1"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="U536_BR_GRUPO_RECURSO_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RoleName"
+    IsNotNull="true"
+    Precision="60"
+    ColumnName="ROLE_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="U536_BR_GRUPO_RECURSO_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="60"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RoleTypeName"
+    IsNotNull="true"
+    Precision="240"
+    ColumnName="ROLE_TYPE_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="U536_BR_GRUPO_RECURSO_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="240"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RoleCode"
+    IsNotNull="true"
+    Precision="30"
+    ColumnName="ROLE_CODE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="U536_BR_GRUPO_RECURSO_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Swposition"
+    Precision="150"
+    ColumnName="SWPOSITION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="U536_BR_GRUPO_RECURSO_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Brnivel"
+    Precision="150"
+    ColumnName="BRNIVEL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="U536_BR_GRUPO_RECURSO_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RrStartDateActive"
+    IsNotNull="true"
+    ColumnName="RR_START_DATE_ACTIVE"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="U536_BR_GRUPO_RECURSO_V"/>
+  <Attribute
+    Name="RrEndDateActive"
+    ColumnName="RR_END_DATE_ACTIVE"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="U536_BR_GRUPO_RECURSO_V"/>
+  <Key
+    Name="U536brgruporecursoveoPrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="U536BRGRUPORECURSOVEO_PRIMARY_"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="br.com.br.gatend.GestaoCliente.v1.model.eo.U536BrGrupoRecursoVEO.GroupId"/>
+    </AttrArray>
+  </Key>
+</Entity>

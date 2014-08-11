@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:f="http://java.sun.com/jsf/core">
+    <af:resource type="javascript"> 
+          function cancelaPopup(actionEvent) {
+            var action = actionEvent.getSource();
+            ok = confirm('Deseja realmente sair desta tela?');
+            if(ok) {
+                AdfCustomEvent.queue(action, 'cancelaPopup', null, false);
+            }
+        }
+        function confirma(actionEvent) {
+            var action = actionEvent.getSource();
+            AdfCustomEvent.queue(action, 'confirma', null, false);
+        
+        }
+        function remove(actionEvent) {
+             var action = actionEvent.getSource();
+              ok = confirm('Deseja realmente excluir o registro?');
+              if (ok) {
+                 AdfCustomEvent.queue(action, 'remove', null, false);
+              } 
+        }
+                        
+        function customHandler(event){
+            var exportCmd = AdfPage.PAGE.findComponentByAbsoluteId("pt1:r2:0:r7:0:b52b");
+            var actionEvent = new AdfActionEvent(exportCmd);
+            actionEvent.forceFullSubmit();
+            actionEvent.noResponseExpected();
+            actionEvent.queue();
+        }
+        
+        function cleanAnexoForm(event){
+            var exportCmd = AdfPage.PAGE.findComponentByAbsoluteId("pt1:r2:0:r7:0:b1");
+            var actionEvent = new AdfActionEvent(exportCmd);
+            actionEvent.forceFullSubmit();
+            actionEvent.noResponseExpected();
+            actionEvent.queue();
+        }
+    </af:resource>     
+        <c:set var="viewcontrollerBundle"
+           value="#{adfBundle['br.com.br.gatend.GestaoCliente.v1.view.ViewControllerBundle']}"/>
+
+     <af:panelWindow id="pw1" binding="#{backingBeanScope.backing_viewAnexo.pw1}"
+                    inlineStyle="background-color:transparent;" closeIconVisible="false">
+        <af:panelGridLayout id="pgl7">
+            <af:gridRow marginTop="5px" height="auto" id="gr6">
+                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc8">
+                    <af:outputFormatted value="Tela de Anexos" id="of1"
+                            inlineStyle="color:Black; font-size:large; text-align:center; flex-align:baseline; flex-line-pack:center;"/>
+                    <af:separator id="s2"/>
+                </af:gridCell>
+            </af:gridRow>
+            <af:gridRow marginTop="5px" height="auto" id="gr8">
+                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc12"/>
+            </af:gridRow>
+            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr9">
+                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc13"> 
+                    <af:outputText
+                        value="Cliente: #{viewAnexoBean.codigoCliente}"
+                        binding="#{backingBeanScope.backing_viewAnexo.outputCliente}"
+                        id="outputCliente"/>
+                </af:gridCell>
+            </af:gridRow>
+        </af:panelGridLayout>
+        <af:panelGridLayout id="pgl2" >
+            <af:gridRow marginTop="2px" height="auto" marginBottom="2px" id="gr2">
+                <af:gridCell marginStart="0px" width="auto" marginEnd="2px" id="gc2"
+                              valign="middle">
+                         <af:selectOneChoice value="#{bindings.U707GcCategAnexoVVO1.inputValue}"
+                                            label="#{viewcontrollerBundle.CATEGORIA}"
+                                            shortDesc="#{bindings.U707GcCategAnexoVVO1.hints.tooltip}" id="soc1"
+                                            binding="#{backingBeanScope.backing_viewAnexo.inputCategoriaAnexo}"
+                                            >
+                            <f:selectItems value="#{bindings.U707GcCategAnexoVVO1.items}" id="si1"/>
+                            <f:validator binding="#{bindings.U707GcCategAnexoVVO1.validator}"/>
+                        </af:selectOneChoice>
+                    </af:gridCell>
+                <af:gridCell id="gc3" valign="middle">
+                     <af:inputFile label="#{viewcontrollerBundle.NOME_ARQUIVO}" id="inputArquivoUpload"
+                                                  columns="35"
+                                                  value="#{backingBeanScope.backing_viewAnexo.arquivoUpload}"
+                                                  binding="#{backingBeanScope.backing_viewAnexo.inputArquivoUpload}"
+                                                  partialTriggers="b1 b2" /> 
+            
+                </af:gridCell>
+                <af:gridCell id="gc4"  valign="middle">
+                     <af:button text="#{viewcontrollerBundle.LIMPAR}" id="b1"
+                               actionListener="#{backingBeanScope.backing_viewAnexo.limparCampos}"
+                               binding="#{backingBeanScope.backing_viewAnexo.b1}"
+                               immediate="true" />
+                                
+                  </af:gridCell>
+            </af:gridRow>
+        </af:panelGridLayout>
+        <af:panelGridLayout id="pgl3" >
+            <af:gridRow marginTop="2px" height="auto" marginBottom="2px" id="gr3"
+                         >
+                <af:gridCell marginStart="0px" width="auto" marginEnd="2px" id="gc5"
+                              valign="middle" >
+                    <af:inputText label="#{viewcontrollerBundle.DESCRICAO}" id="it3"
+                                                  columns="77"
+                                                  value="#{backingBeanScope.backing_viewAnexo.descricao}"
+                                                  binding="#{backingBeanScope.backing_viewAnexo.inputDescricao}"
+                                                  partialTriggers="b1 b2" />          
+                </af:gridCell>
+                <af:gridCell id="gc6"  valign="middle">              
+                     <af:button text="#{viewcontrollerBundle.ANEXAR_LISTA}" id="b2"
+                                               action="#{backingBeanScope.backing_viewAnexo.anexarNaLista}"/>
+                    
+                </af:gridCell>
+            </af:gridRow>                        
+        </af:panelGridLayout>
+        <af:panelGridLayout id="pgl4" >
+            <af:gridRow marginTop="2px" height="auto" marginBottom="2px" id="gr4">
+                <af:gridCell marginStart="0px" width="auto" marginEnd="2px" id="gc7"/>
+            </af:gridRow>
+        </af:panelGridLayout>
+        <af:panelGridLayout id="pgl6" >
+            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr71"                >
+                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc11" halign="start">
+                    <af:outputFormatted id="sbc1" value="Lista de Anexos" inlineStyle="color:Black;"/>
+                </af:gridCell>
+            </af:gridRow>
+            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr7">
+                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc111">
+                        <af:table value="#{bindings.ListaAnexoVO1.collectionModel}" var="row"
+                                  rows="#{bindings.ListaAnexoVO1.rangeSize}"
+                                  selectedRowKeys="#{bindings.ListaAnexoVO1.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.ListaAnexoVO1.collectionModel.makeCurrent}"
+                                  rowSelection="single" 
+                                  emptyText="#{bindings.ListaAnexoVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  rowBandingInterval="0" fetchSize="#{bindings.ListaAnexoVO1.rangeSize}" 
+                                  binding="#{backingBeanScope.backing_viewAnexo.tabelaListaAnexos}"
+                                  id="t4" 
+                                  summary="Lista de Anexo"
+                                  >                        
+                          <af:column headerText="#{bindings.ListaAnexoVO1.hints.Sequencial.label}" id="c4">
+                                <af:outputText value="#{row.Sequencial}"
+                                               shortDesc="#{bindings.ListaAnexoVO1.hints.Sequencial.tooltip}"
+                                               id="it2"/>
+                            </af:column>
+                            <af:column headerText="#{bindings.ListaAnexoVO1.hints.Categoria.label}" id="c6">
+                                <af:outputText value="#{row.Categoria}"
+                                               shortDesc="#{bindings.ListaAnexoVO1.hints.Categoria.tooltip}"
+                                               id="ot2"/>
+                            </af:column>
+                            <af:column headerText="#{bindings.ListaAnexoVO1.hints.Descricao.label}" id="c7">
+                                <af:outputText value="#{row.Descricao}"
+                                               shortDesc="#{bindings.ListaAnexoVO1.hints.Descricao.tooltip}"
+                                               id="ot3"/>
+                            </af:column>
+                            <af:column headerText="#{bindings.ListaAnexoVO1.hints.NomeArquivo.label}" id="c8">
+                                <af:outputText value="#{row.NomeArquivo}"
+                                               shortDesc="#{bindings.ListaAnexoVO1.hints.NomeArquivo.tooltip}" id="ot4">
+                                    <af:convertNumber groupingUsed="false"
+                                                      pattern="#{bindings.ListaAnexoVO1.hints.NomeArquivo.format}"/>
+                                </af:outputText>
+                            </af:column>
+                        </af:table>
+                    </af:gridCell>
+            </af:gridRow>
+        </af:panelGridLayout>
+        <af:panelGridLayout id="pgl61" >
+            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr711">
+                <af:gridCell marginStart="5px"  marginEnd="5px" id="gc711" halign="start">
+                    <af:button text="Excluir da Lista" id="b51"
+                                   partialSubmit="false"
+                                   partialTriggers="b1">
+                                    <af:clientListener method="remove" type="click"/>
+                                    <af:serverListener type="remove" method="#{backingBeanScope.backing_viewAnexo.removerItens}"/>
+                        </af:button>        
+                </af:gridCell>
+                <af:gridCell marginStart="5px" marginEnd="5px" id="gc7111" halign="start">
+                    <af:button text="Visualizar Arquivo" partialSubmit="false" id="b52a" action="#{viewAnexoBean.validarDownload}">
+                    </af:button>
+                     <af:button id="b52b" partialSubmit="false" visible="false" >
+                            <af:fileDownloadActionListener method="#{viewAnexoBean.viewFileAnexoPorId}" />
+                    </af:button>
+                </af:gridCell>
+            </af:gridRow>
+        </af:panelGridLayout>
+        
+        <af:separator id="s1"/>
+     
+        <af:panelGridLayout id="pgl5"  >
+            <af:gridRow marginTop="0px" height="100%" id="gr5">
+                <af:gridCell id="gc10"  width="100%" halign="end">
+                       <af:button text="Confirmar" id="b3"
+                                   partialSubmit="false"
+                                   partialTriggers="b1">
+                                    <af:clientListener method="confirma" type="click"/>
+                                    <af:serverListener type="confirma" method="#{viewAnexoBean.confirmar}"/>
+                        </af:button>           
+                </af:gridCell>
+                <af:gridCell marginStart="2px" width="auto" marginEnd="2px" id="gc9" 
+                                   halign="end">   
+                                   
+                    <af:button text="#{viewcontrollerBundle.CANCELAR}"
+                                        id="btnCancelar"
+                                        immediate="false"
+                                         partialSubmit="true">
+                                        
+                                    <af:clientListener method="cancelaPopup" type="click"/>
+                                    <af:serverListener type="cancelaPopup" method="#{viewAnexoBean.cancelarPopup}"/> 
+                     </af:button>
+                </af:gridCell>
+            </af:gridRow>
+         </af:panelGridLayout>
+    </af:panelWindow>
+</ui:composition>

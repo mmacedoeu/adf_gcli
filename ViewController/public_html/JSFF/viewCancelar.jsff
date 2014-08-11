@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <af:panelBox text="Dados Básicos" id="pb1" binding="#{backingBeanScope.backing_viewCancelar.pb1}">
+        <f:facet name="toolbar"/>
+        <af:panelGroupLayout id="pgl2" binding="#{backingBeanScope.backing_viewCancelar.pgl2}" layout="vertical">
+            <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_viewCancelar.pfl1}">
+                <f:facet name="footer"/>
+                <af:selectOneRadio label="Perfil:" id="sor1" binding="#{backingBeanScope.backing_viewCancelar.sor1}"
+                                   layout="horizontal" labelStyle="color:black;"
+                                   value="#{backingBeanScope.backing_viewCancelar.perfil}">
+                    <af:selectItem label="Pessoa Física" value="Pessoa Física" id="si1"
+                                   binding="#{backingBeanScope.backing_viewCancelar.si1}" disabled="false"/>
+                    <af:selectItem label="Pessoa Jurídica" value="Pessoa Jurídica" id="si2"
+                                   binding="#{backingBeanScope.backing_viewCancelar.si2}"/>
+                    <af:selectItem label="Estrangeiro" value="Estrangeiro" id="si3"
+                                   binding="#{backingBeanScope.backing_viewCancelar.si3}"/>
+                </af:selectOneRadio>
+                <af:spacer width="10" height="10" id="s2" binding="#{backingBeanScope.backing_viewCancelar.s2}"/>
+                <af:inputText label="Código Temporário:" id="it2" binding="#{backingBeanScope.backing_viewCancelar.it2}"
+                              contentStyle="background-color: white;border-style:solid;border-color:#c6c6c6;"
+                              columns="20" labelStyle="color:black;"
+                              value="#{backingBeanScope.backing_viewCancelar.codigoR3}"/>
+                <!--af:inputListOfValues label="CPF/CNPJ/EST:" popupTitle="Search and Result Dialog" id="ilov1"
+                                      binding="#{backingBeanScope.backing_viewCancelar.ilov1}"
+                                      contentStyle="background-color: white;border-style:solid;border-color:#c6c6c6;"
+                                      labelStyle="color:black;"/-->
+                                      
+                <af:inputText label="CPF/CNPJ/EST:" id="it5" 
+                              contentStyle="background-color: white;border-style:solid;border-color:#c6c6c6;"
+                              labelStyle="color:black; float: left;"
+                              binding="#{backingBeanScope.backing_viewCancelar.it5}" maximumLength="30"
+                              value="#{backingBeanScope.backing_viewCancelar.tipoCliente}"/>
+                <af:link id="l1" binding="#{backingBeanScope.backing_viewCancelar.l1}" 
+                                 icon="/IMAGEM/icon_search.png"
+                                 inlineStyle="float: left; margin-top: -21px; margin-left: 180px;"
+                         actionListener="#{backingBeanScope.backing_viewCancelar.selecionaValidaLocaliza}"/>
+                <af:inputText label="Nome/Razão Social:" id="it1" binding="#{backingBeanScope.backing_viewCancelar.it1}"
+                              contentStyle="background-color: white;border-style:solid;border-color:#c6c6c6;"
+                              columns="77" labelStyle="color:black;"
+                              value="#{backingBeanScope.backing_viewCancelar.razaoSocial}" disabled="true"/>
+                <af:inputText id="it4" binding="#{backingBeanScope.backing_viewCancelar.it4}"
+                              contentStyle="background-color: white;border-style:solid;border-color:#c6c6c6;"
+                              labelStyle="color:black;" columns="77"
+                              value="#{backingBeanScope.backing_viewCancelar.razaoSocial2}" disabled="true"/>
+                <af:inputText label="Grupo de Contas:" id="it3" binding="#{backingBeanScope.backing_viewCancelar.it3}"
+                              contentStyle="background-color: white;border-style:solid;border-color:#c6c6c6;"
+                              columns="40" labelStyle="color:black;"
+                              value="#{backingBeanScope.backing_viewCancelar.grupoContas}" disabled="true"/>
+            </af:panelFormLayout>
+        </af:panelGroupLayout>
+    </af:panelBox>
+    <af:separator id="s5" binding="#{backingBeanScope.backing_viewCancelar.s5}"/>
+    <af:panelBox text="Endereço" id="pb2" binding="#{backingBeanScope.backing_viewCancelar.pb2}">
+        <f:facet name="toolbar"/>
+        <af:panelGridLayout id="pgl3" binding="#{backingBeanScope.backing_viewCancelar.pgl3}">
+            <af:gridRow marginTop="5px" height="auto" id="gr1"
+                        binding="#{backingBeanScope.backing_viewCancelar.gr1}">
+                <af:gridCell id="gc1"
+                             halign="end"
+                             valign="middle" inlineStyle="margin-right:5%;"
+                             binding="#{backingBeanScope.backing_viewCancelar.gc1}">
+                    <af:outputLabel value="CEP:" id="ol1"
+                                    binding="#{backingBeanScope.backing_viewCancelar.ol1}" inlineStyle="color:Black;"/>
+                </af:gridCell>
+                <af:gridCell id="gc2"
+                             binding="#{backingBeanScope.backing_viewCancelar.gc2}">
+                    <af:inputText id="itCep"
+                                  inlineStyle="margin-right:20%;" columns="11" disabled="true"
+                                  contentStyle="background-color: white;border-style:solid;border-color:#c6c6c6;"
+                                  binding="#{backingBeanScope.backing_viewCancelar.itCep}"
+                                  value="#{backingBeanScope.backing_viewCancelar.cep}"/>
+                </af:gridCell>
+            </af:gridRow>
+            <af:gridRow id="gr2" binding="#{backingBeanScope.backing_viewCancelar.gr2}" marginTop="5px">
+                <af:gridCell id="gc3" binding="#{backingBeanScope.backing_viewCancelar.gc3}" halign="end"
+                             valign="middle" marginStart="30px">
+                    <af:outputLabel value="Logradouro:" id="ol2"
+                                    binding="#{backingBeanScope.backing_viewCancelar.ol2}" inlineStyle="color:Black;"/>
+                </af:gridCell>
+                <af:gridCell id="gc4" binding="#{backingBeanScope.backing_viewCancelar.gc4}">
+                    <af:inputText id="it6" columns="63"
+                                  contentStyle="background-color: white;border-style:solid;border-color:#c6c6c6;"
+                                  disabled="true"
+                                  binding="#{backingBeanScope.backing_viewCancelar.it6}"
+                                  value="#{backingBeanScope.backing_viewCancelar.logradouro}"/>
+                </af:gridCell>
+            </af:gridRow>
+            <af:gridRow id="gr3" binding="#{backingBeanScope.backing_viewCancelar.gr3}" marginTop="5px">
+                <af:gridCell id="gc5" 
+                             halign="end"
+                             valign="middle" marginStart="5px"
+                             binding="#{backingBeanScope.backing_viewCancelar.gc5}">
+                    <af:outputLabel value="Número:" id="ol3"
+                                    binding="#{backingBeanScope.backing_viewCancelar.ol3}" inlineStyle="color:Black;"/>
+                </af:gridCell>
+                <af:gridCell id="gc6" 
+                             width="25%"
+                             marginStart="5px"
+                             binding="#{backingBeanScope.backing_viewCancelar.gc6}">
+                    <af:inputText id="it7"
+                                  contentStyle="background-color: white;border-style:solid;border-color:#c6c6c6;"
+                                  columns="10"
+                                  disabled="true"
+                                  binding="#{backingBeanScope.backing_viewCancelar.it7}"
+                                  value="#{backingBeanScope.backing_viewCancelar.numero}"/>
+                </af:gridCell>
+            </af:gridRow>
+            <af:gridRow id="gr4" binding="#{backingBeanScope.backing_viewCancelar.gr4}" marginTop="5px">
+                <af:gridCell id="gc7" binding="#{backingBeanScope.backing_viewCancelar.gc7}" valign="middle"
+                             halign="end">
+                    <af:outputLabel value="Complemento:" id="ol4" inlineStyle="color:Black;"
+                                    binding="#{backingBeanScope.backing_viewCancelar.ol4}"/>
+                </af:gridCell>
+                <af:gridCell id="gc8" binding="#{backingBeanScope.backing_viewCancelar.gc8}" width="10%">
+                    <af:inputText id="it8" 
+                                  contentStyle="background-color: white;border-style:solid;border-color:#c6c6c6;"
+                                  disabled="true"
+                                  binding="#{backingBeanScope.backing_viewCancelar.it8}"
+                                  value="#{backingBeanScope.backing_viewCancelar.complemento}"/>
+                </af:gridCell>
+                <af:gridCell id="gc9" binding="#{backingBeanScope.backing_viewCancelar.gc9}" halign="end"
+                             valign="middle">
+                    <af:outputLabel value="Lote:" id="ol5" inlineStyle="color:Black;"
+                                    binding="#{backingBeanScope.backing_viewCancelar.ol5}"/>
+                </af:gridCell>
+                <af:gridCell id="gc10" binding="#{backingBeanScope.backing_viewCancelar.gc10}" width="80%">
+                    <af:inputText id="it9" binding="#{backingBeanScope.backing_viewCancelar.it9}" 
+                                  contentStyle="background-color: white;border-style:solid;border-color:#c6c6c6;"
+                                  columns="10" disabled="true" value="#{backingBeanScope.backing_viewCancelar.lote}"/>
+                </af:gridCell>
+            </af:gridRow>
+            <af:gridRow id="gr5" binding="#{backingBeanScope.backing_viewCancelar.gr5}" marginTop="5px">
+                <af:gridCell id="gc11" binding="#{backingBeanScope.backing_viewCancelar.gc11}" halign="end" valign="middle">
+                    <af:outputLabel value="Quadra:" id="ol6"
+                                    binding="#{backingBeanScope.backing_viewCancelar.ol6}" inlineStyle="color:Black;"/>
+                </af:gridCell>
+                <af:gridCell id="gc12" binding="#{backingBeanScope.backing_viewCancelar.gc12}">
+                    <af:inputText id="it10" 
+                                  columns="11"
+                                  contentStyle="background-color: white;border-style:solid;border-color:#c6c6c6;"
+                                  disabled="true"
+                                  binding="#{backingBeanScope.backing_viewCancelar.it10}"
+                                  value="#{backingBeanScope.backing_viewCancelar.quadra}"/>
+                </af:gridCell>
+                <af:gridCell id="gc13" 
+                             halign="end"
+                             valign="middle" marginStart="5px"
+                             binding="#{backingBeanScope.backing_viewCancelar.gc13}">
+                    <af:outputLabel value="Bloco:" id="ol7" inlineStyle="color:Black;"
+                                    binding="#{backingBeanScope.backing_viewCancelar.ol7}"/>
+                </af:gridCell>
+                <af:gridCell id="gc14" 
+                             binding="#{backingBeanScope.backing_viewCancelar.gc14}">
+                    <af:inputText id="it11"
+                                  columns="10"
+                                  contentStyle="background-color: white;border-style:solid;border-color:#c6c6c6;" disabled="true"
+                                  binding="#{backingBeanScope.backing_viewCancelar.it11}"/>
+                </af:gridCell>
+            </af:gridRow>
+            <af:gridRow id="gr6" binding="#{backingBeanScope.backing_viewCancelar.gr6}" marginTop="5px">
+                <af:gridCell id="gc15" binding="#{backingBeanScope.backing_viewCancelar.gc15}" halign="end" valign="middle">
+                    <af:outputLabel value="Bairro:" id="ol8"
+                                    binding="#{backingBeanScope.backing_viewCancelar.ol8}" inlineStyle="color:Black;"/>
+                </af:gridCell>
+                <af:gridCell id="gc16" binding="#{backingBeanScope.backing_viewCancelar.gc16}">
+                    <af:inputText id="it12" 
+                                  contentStyle="background-color: white;border-style:solid;border-color:#c6c6c6;"
+                                  disabled="true"
+                                  binding="#{backingBeanScope.backing_viewCancelar.it12}"
+                                  value="#{backingBeanScope.backing_viewCancelar.bairro}"/>
+                </af:gridCell>
+            </af:gridRow>
+            <af:gridRow id="gr7" binding="#{backingBeanScope.backing_viewCancelar.gr7}" marginTop="5px">
+                <af:gridCell id="gc21" binding="#{backingBeanScope.backing_viewCancelar.gc21}" halign="end"
+                             valign="middle">
+                    <af:outputLabel value="País:" id="ol9" inlineStyle="color:Black;"
+                                    binding="#{backingBeanScope.backing_viewCancelar.ol9}"/>
+                </af:gridCell>
+                <af:gridCell id="gc19" binding="#{backingBeanScope.backing_viewCancelar.gc19}">
+                    <af:inputText id="it13" 
+                                  contentStyle="background-color: white;border-style:solid;border-color:#c6c6c6;"
+                                  disabled="true"
+                                  binding="#{backingBeanScope.backing_viewCancelar.it13}"
+                                  value="#{backingBeanScope.backing_viewCancelar.pais}"/>
+                </af:gridCell>
+            </af:gridRow>
+            <af:gridRow id="gr8" binding="#{backingBeanScope.backing_viewCancelar.gr8}" marginTop="5px">
+                <af:gridCell id="gc23" binding="#{backingBeanScope.backing_viewCancelar.gc23}" halign="end" valign="middle">
+                    <af:outputLabel value="Estado:" id="ol10" inlineStyle="color:Black;"
+                                    binding="#{backingBeanScope.backing_viewCancelar.ol10}"/>
+                </af:gridCell>
+                <af:gridCell id="gc22" binding="#{backingBeanScope.backing_viewCancelar.gc22}">
+                    <af:inputText id="it14" 
+                                  contentStyle="background-color: white;border-style:solid;border-color:#c6c6c6;"
+                                  disabled="true"
+                                  binding="#{backingBeanScope.backing_viewCancelar.it14}"
+                                  value="#{backingBeanScope.backing_viewCancelar.estado}"/>
+                </af:gridCell>
+            </af:gridRow>
+            <af:gridRow id="gr9" binding="#{backingBeanScope.backing_viewCancelar.gr9}" marginTop="5px">
+                <af:gridCell id="gc25" binding="#{backingBeanScope.backing_viewCancelar.gc25}" halign="end" valign="middle">
+                    <af:outputLabel value="Município:" id="ol11" inlineStyle="color:Black;"
+                                    binding="#{backingBeanScope.backing_viewCancelar.ol11}"/>
+                </af:gridCell>
+                <af:gridCell id="gc24" binding="#{backingBeanScope.backing_viewCancelar.gc24}">
+                    <af:inputText id="it15" 
+                                  contentStyle="background-color: white;border-style:solid;border-color:#c6c6c6;"
+                                  disabled="true"
+                                  binding="#{backingBeanScope.backing_viewCancelar.it15}"
+                                  value="#{backingBeanScope.backing_viewCancelar.cidade}"/>
+                </af:gridCell>
+            </af:gridRow>
+        </af:panelGridLayout>
+    </af:panelBox>
+    <af:separator id="s3" binding="#{backingBeanScope.backing_viewCancelar.s3}"/>
+    <af:popup childCreation="deferred" autoCancel="disabled" id="popUpCancelaCliente"
+              binding="#{backingBeanScope.backing_viewCancelar.popUpCancelaCliente}">
+        <af:dialog id="d1" binding="#{backingBeanScope.backing_viewCancelar.d1}" type="yesNo" modal="true"
+                   closeIconVisible="false"
+                   title="Cancelar código temporário"
+                   dialogListener="#{backingBeanScope.backing_viewCancelar.popupValidaCancelarCliente}">
+                <af:outputFormatted value="Deseja confirmar cancelamento?" id="of1"
+                                    binding="#{backingBeanScope.backing_viewCancelar.of1}"/>
+            <f:facet name="buttonBar"/>
+        </af:dialog>
+    </af:popup>
+    <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_viewCancelar.pgl1}">
+        <af:gridRow height="100%" id="gr10"
+                    binding="#{backingBeanScope.backing_viewCancelar.gr10}">
+            <af:gridCell width="100%" id="gcc1"
+                         binding="#{backingBeanScope.backing_viewCancelar.gcc1}" halign="end">
+                <af:button text="Limpar" id="b1"
+                           inlineStyle="font-weight:bold; width:80px;background-color:Black; text-justify:auto; text-align:center;"
+                           binding="#{backingBeanScope.backing_viewCancelar.b1}"
+                           actionListener="#{backingBeanScope.backing_viewCancelar.clearFields}"/>
+            </af:gridCell>
+            <af:gridCell marginStart="2px" width="auto" marginEnd="2px" id="gcc"
+                         binding="#{backingBeanScope.backing_viewCancelar.gcc}">
+                <af:button text="Salvar" id="b2" binding="#{backingBeanScope.backing_viewCancelar.b2}"
+                           inlineStyle="font-weight:bold; width:80px;background-color:Black; text-justify:auto; text-align:center;">
+                    <af:showPopupBehavior popupId="popUpCancelaCliente" triggerType="action"/>
+                </af:button>
+            </af:gridCell>
+        </af:gridRow>
+    </af:panelGridLayout>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_viewCancelar-->
+</ui:composition>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:h="http://java.sun.com/jsf/html">
+    <h:messages id="messages"/>
+    <c:set var="viewcontrollerBundle"
+           value="#{adfBundle['br.com.br.gatend.GestaoCliente.v1.view.ViewControllerBundle']}"/>
+    <af:document title="NovoCliente.jsf" id="d1" binding="#{backingBeanScope.backing_NovoCliente.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_NovoCliente.f1}">
+            <af:pageTemplate viewId="/JSF/TemplateBRFocus.jsf" id="pt1"
+                             binding="#{backingBeanScope.backing_NovoCliente.pt1}">
+                <f:facet name="rownum1">
+                    <af:region value="#{bindings.taskflowDBasicos1.regionModel}" id="r1"
+                               binding="#{backingBeanScope.backing_NovoCliente.r1}"/>
+                </f:facet>
+                <f:facet name="rownum2">
+                    <af:region value="#{bindings.taskflowendereco1.regionModel}" id="r2"
+                               binding="#{backingBeanScope.backing_NovoCliente.r2}"/>
+                </f:facet>
+                <f:facet name="center"/>
+                <f:attribute name="title1" value="#{viewcontrollerBundle.NOVO}"/>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_NovoCliente-->
+</f:view>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.2.66.68" id="viewCancelarPageDef"
+                Package="JSFF">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+  </executables>
+  <bindings>
+    <methodAction id="localizarClientePeloCodigoR3" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="localizarClientePeloCodigoR3" IsViewObjectMethod="false"
+                  DataControl="CancelarClienteAMDataControl"
+                  InstanceName="data.CancelarClienteAMDataControl.dataProvider"
+                  ReturnName="data.CancelarClienteAMDataControl.methodResults.localizarClientePeloCodigoR3_CancelarClienteAMDataControl_dataProvider_localizarClientePeloCodigoR3_result">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+    <methodAction id="localizaCnpjCompleto" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="localizaCnpjCompleto" IsViewObjectMethod="false"
+                  DataControl="CancelarClienteAMDataControl"
+                  InstanceName="data.CancelarClienteAMDataControl.dataProvider"
+                  ReturnName="data.CancelarClienteAMDataControl.methodResults.localizaCnpjCompleto_CancelarClienteAMDataControl_dataProvider_localizaCnpjCompleto_result">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+    <methodAction id="localizaCodEstrangeiroCliente" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="localizaCodEstrangeiroCliente" IsViewObjectMethod="false"
+                  DataControl="CancelarClienteAMDataControl"
+                  InstanceName="data.CancelarClienteAMDataControl.dataProvider"
+                  ReturnName="data.CancelarClienteAMDataControl.methodResults.localizaCodEstrangeiroCliente_CancelarClienteAMDataControl_dataProvider_localizaCodEstrangeiroCliente_result">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+    <methodAction id="localizaPaisCliente" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="localizaPaisCliente" IsViewObjectMethod="false" DataControl="CancelarClienteAMDataControl"
+                  InstanceName="data.CancelarClienteAMDataControl.dataProvider"
+                  ReturnName="data.CancelarClienteAMDataControl.methodResults.localizaPaisCliente_CancelarClienteAMDataControl_dataProvider_localizaPaisCliente_result">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+    <methodAction id="localizaCpfCompleto" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="localizaCpfCompleto" IsViewObjectMethod="false" DataControl="CancelarClienteAMDataControl"
+                  InstanceName="data.CancelarClienteAMDataControl.dataProvider"
+                  ReturnName="data.CancelarClienteAMDataControl.methodResults.localizaCpfCompleto_CancelarClienteAMDataControl_dataProvider_localizaCpfCompleto_result">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+    <methodAction id="getOportunidadeDRPS" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="getOportunidadeDRPS" IsViewObjectMethod="false" DataControl="CancelarClienteAMDataControl"
+                  InstanceName="data.CancelarClienteAMDataControl.dataProvider"
+                  ReturnName="data.CancelarClienteAMDataControl.methodResults.getOportunidadeDRPS_CancelarClienteAMDataControl_dataProvider_getOportunidadeDRPS_result">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+    <methodAction id="getOportunidadeGNE" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="getOportunidadeGNE" IsViewObjectMethod="false" DataControl="CancelarClienteAMDataControl"
+                  InstanceName="data.CancelarClienteAMDataControl.dataProvider"
+                  ReturnName="data.CancelarClienteAMDataControl.methodResults.getOportunidadeGNE_CancelarClienteAMDataControl_dataProvider_getOportunidadeGNE_result">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+    <methodAction id="getContratos" RequiresUpdateModel="true" Action="invokeMethod" MethodName="getContratos"
+                  IsViewObjectMethod="false" DataControl="CancelarClienteAMDataControl"
+                  InstanceName="data.CancelarClienteAMDataControl.dataProvider"
+                  ReturnName="data.CancelarClienteAMDataControl.methodResults.getContratos_CancelarClienteAMDataControl_dataProvider_getContratos_result">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+    <methodAction id="execProcCancelarCliente" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="execProcCancelarCliente" IsViewObjectMethod="false"
+                  DataControl="CancelarClienteAMDataControl"
+                  InstanceName="data.CancelarClienteAMDataControl.dataProvider"
+                  ReturnName="data.CancelarClienteAMDataControl.methodResults.execProcCancelarCliente_CancelarClienteAMDataControl_dataProvider_execProcCancelarCliente_result">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>

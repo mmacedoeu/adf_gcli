@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.2.66.68" id="viewLatitudeLongitudePageDef"
+                Package="JSFF" SkipValidation="custom">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator id="ClienteVO1Iterator" Binds="ClienteVO1" DataControl="LatitudeLongitudeAMDataControl" RangeSize="25"/>
+    <iterator Binds="ConsultaGoogleMapsReturnVO1" RangeSize="25" DataControl="LatitudeLongitudeAMDataControl"
+              id="ConsultaGoogleMapsReturnVO1Iterator"/>
+  </executables>
+  <bindings>
+    <methodAction id="consultarLatitudeLongitude" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="consultarLatitudeLongitude" IsViewObjectMethod="false"
+                  DataControl="LatitudeLongitudeAMDataControl"
+                  InstanceName="data.LatitudeLongitudeAMDataControl.dataProvider">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+    <tree IterBinding="ConsultaGoogleMapsReturnVO1Iterator" id="ConsultaGoogleMapsReturnVO1">
+      <nodeDefinition DefName="br.com.br.gatend.GestaoCliente.v1.model.vo.ConsultaGoogleMapsReturnVO"
+                      Name="ConsultaGoogleMapsReturnVO10">
+        <AttrNames>
+          <Item Value="latitude"/>
+          <Item Value="longitude"/>
+          <Item Value="endereco"/>
+          <Item Value="bairro"/>
+          <Item Value="pais"/>
+          <Item Value="estado"/>
+          <Item Value="booleanRadio" Binds="booleanRadio"/>
+          <Item Value="disableRadio"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <methodAction id="alteraValorSelecionadoPeloIndice" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="alteraValorSelecionadoPeloIndice" IsViewObjectMethod="false"
+                  DataControl="LatitudeLongitudeAMDataControl"
+                  InstanceName="data.LatitudeLongitudeAMDataControl.dataProvider">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+    <methodAction id="confirmarLatitudeLongitude" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="confirmarLatitudeLongitude" IsViewObjectMethod="false"
+                  DataControl="LatitudeLongitudeAMDataControl"
+                  InstanceName="data.LatitudeLongitudeAMDataControl.dataProvider"
+                  ReturnName="data.LatitudeLongitudeAMDataControl.methodResults.confirmarLatitudeLongitude_LatitudeLongitudeAMDataControl_dataProvider_confirmarLatitudeLongitude_result">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+    <methodAction id="emptyTableLatLong" RequiresUpdateModel="true" Action="invokeMethod" MethodName="emptyTableLatLong"
+                  IsViewObjectMethod="false" DataControl="LatitudeLongitudeAMDataControl"
+                  InstanceName="data.LatitudeLongitudeAMDataControl.dataProvider"/>
+  </bindings>
+</pageDefinition>

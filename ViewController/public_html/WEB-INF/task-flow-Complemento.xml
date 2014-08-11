@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="task-flow-Complemento">
+    <default-activity>viewComplemento</default-activity>
+    <transaction>
+      <new-transaction/>
+    </transaction>
+    <managed-bean id="__1">
+      <managed-bean-name>backing_viewComplemento</managed-bean-name>
+      <managed-bean-class>br.com.br.gatend.GestaoCliente.v1.view.backing.ViewComplemento</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+      <!--oracle-jdev-comment:managed-bean-jsp-link:1JSFF/viewComplemento.jsff-->
+    </managed-bean>
+    <managed-bean id="__2">
+      <managed-bean-name>backing_viewComplemento</managed-bean-name>
+      <managed-bean-class></managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__3">
+      <managed-bean-name>backing_viewCheckListAud</managed-bean-name>
+      <managed-bean-class>br.com.br.gatend.GestaoCliente.v1.view.backing.ViewCheckListAud</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+    </managed-bean>
+    <view id="viewComplemento">
+      <page>/JSFF/viewComplemento.jsff</page>
+    </view>
+    <control-flow-rule id="__4">
+      <from-activity-id>*</from-activity-id>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

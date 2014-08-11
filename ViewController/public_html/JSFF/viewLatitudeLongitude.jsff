@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core" xmlns:c="http://java.sun.com/jsp/jstl/core"
+                xmlns:h="http://java.sun.com/jsf/html">
+    <c:set var="viewcontrollerBundle"
+           value="#{adfBundle['br.com.br.gatend.GestaoCliente.v1.view.ViewControllerBundle']}"/>
+    <af:resource type="javascript">
+        function cancelaPopup(actionEvent) {
+            var action = actionEvent.getSource();
+            ok = confirm('Deseja realmente sair desta tela?');
+            if(ok) {
+                AdfCustomEvent.queue(action, 'cancelaPopup', null, false);
+            }
+        }
+        function confirmaLatitudeLongitude(actionEvent) {
+            var action = actionEvent.getSource();
+            ok = confirm('Os valores de Latitude e Longitude foram alterados. Confirma alteração?');
+            if(ok) {
+                AdfCustomEvent.queue(action, 'confirmaLatitudeLongitude', null, false);
+            }
+        }
+        function selectedRow(evt){
+            var richTable = evt.getSource();
+            alert ('Selected row' +rcihTable.getRowSelection());
+        }
+    </af:resource> 
+   <af:panelWindow id="pw1" binding="#{backingBeanScope.backing_viewLatitudeLongitude.pw1}"
+                    inlineStyle="background-color:transparent;" closeIconVisible="false">
+        <af:showDetailHeader text="#{viewcontrollerBundle.DADOS_DO_CLIENTE}" disclosed="true" id="sdh2"
+                             binding="#{backingBeanScope.backing_viewLatitudeLongitude.sdh2}">
+            <f:facet name="context"/>
+            <f:facet name="menuBar"/>
+            <f:facet name="toolbar"/>
+            <f:facet name="legend"/>
+            <f:facet name="info"/>
+            <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_viewLatitudeLongitude.pgl1}">
+                <af:gridRow marginTop="5px" height="auto" id="gr1"
+                            binding="#{backingBeanScope.backing_viewLatitudeLongitude.gr1}">
+                    <af:gridCell marginStart="5px" id="gc1"
+                                 binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc1}" halign="end"
+                                 valign="middle">
+                        <h:outputLabel value="Cliente:" id="ol1"
+                                       binding="#{backingBeanScope.backing_viewLatitudeLongitude.ol1}"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="25%" id="gc2"
+                                 binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc2}">
+                        <af:inputText id="it4"
+                                      binding="#{backingBeanScope.backing_viewLatitudeLongitude.it4}"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                      columns="20" value="#{backingBeanScope.backing_viewLatitudeLongitude.cliente}"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc9" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc9}"
+                                 marginStart="5px" halign="end" valign="middle">
+                        <h:outputLabel value="Cód. R3:" id="ol2"
+                                       binding="#{backingBeanScope.backing_viewLatitudeLongitude.ol2}"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc10" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc10}"
+                                 width="25%" marginStart="5px">
+                        <af:inputText id="it3"
+                                      binding="#{backingBeanScope.backing_viewLatitudeLongitude.it3}"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                      columns="20" value="#{backingBeanScope.backing_viewLatitudeLongitude.codR3}"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc11" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc11}"
+                                 marginStart="5px" halign="end" valign="middle">
+                        <h:outputLabel value="Latitude:" id="ol3"
+                                       binding="#{backingBeanScope.backing_viewLatitudeLongitude.ol3}"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc12" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc12}"
+                                 width="25%" marginStart="5px">
+                        <af:inputText id="it2"
+                                      binding="#{backingBeanScope.backing_viewLatitudeLongitude.it2}"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                      columns="20" value="#{backingBeanScope.backing_viewLatitudeLongitude.latitude}"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc13" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc13}"
+                                 marginStart="5px" halign="end" valign="middle">
+                        <h:outputLabel value="Longitude:" id="ol4"
+                                       binding="#{backingBeanScope.backing_viewLatitudeLongitude.ol4}"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc14" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc14}"
+                                 width="25%" marginStart="5px" marginEnd="5px">
+                        <af:inputText id="it1"
+                                      binding="#{backingBeanScope.backing_viewLatitudeLongitude.it1}"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                      columns="20" value="#{backingBeanScope.backing_viewLatitudeLongitude.longitude}"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow id="gr3" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gr3}" marginTop="5px">
+                    <af:gridCell id="gc5" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc5}"
+                                 marginStart="5px" halign="end" valign="middle">
+                        <h:outputLabel value="Endereço:" id="ol5"
+                                       binding="#{backingBeanScope.backing_viewLatitudeLongitude.ol5}"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc3" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc3}" width="25%"
+                                 marginStart="5px">
+                        <af:inputText id="it5"
+                                      binding="#{backingBeanScope.backing_viewLatitudeLongitude.it5}" columns="63"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                      value="#{backingBeanScope.backing_viewLatitudeLongitude.endereco}"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc7" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc7}"
+                                 marginStart="5px" halign="end" valign="middle"/>
+                    <af:gridCell id="gc15" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc15}"
+                                 width="25%" marginStart="5px"/>
+                    <af:gridCell id="gc16" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc16}"
+                                 marginStart="5px" halign="end" valign="middle">
+                        <h:outputLabel value="País:" id="ol6"
+                                       binding="#{backingBeanScope.backing_viewLatitudeLongitude.ol6}"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc8" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc8}" width="25%"
+                                 marginStart="5px">
+                        <af:inputText id="it6" binding="#{backingBeanScope.backing_viewLatitudeLongitude.it6}"
+                                      columns="5"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                      value="#{backingBeanScope.backing_viewLatitudeLongitude.pais}"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc4" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc4}"
+                                 marginStart="5px" halign="end" valign="middle">
+                        <h:outputLabel value="Estado:" id="ol7"
+                                       binding="#{backingBeanScope.backing_viewLatitudeLongitude.ol7}"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc6" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc6}" width="25%"
+                                 marginStart="5px" marginEnd="5px">
+                        <af:inputText id="it7" binding="#{backingBeanScope.backing_viewLatitudeLongitude.it7}"
+                                      columns="5"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                      value="#{backingBeanScope.backing_viewLatitudeLongitude.estado}"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow id="gr2" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gr2}" marginTop="5px">
+                    <af:gridCell id="gc17" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc17}"
+                                 marginStart="5px" halign="end" valign="middle">
+                        <h:outputLabel value="Bairro:" id="ol8"
+                                       binding="#{backingBeanScope.backing_viewLatitudeLongitude.ol8}"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc18" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc18}"
+                                 width="25%" marginStart="5px">
+                        <af:inputText id="it8"
+                                      binding="#{backingBeanScope.backing_viewLatitudeLongitude.it8}"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                      columns="20" value="#{backingBeanScope.backing_viewLatitudeLongitude.bairro}"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc19" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc19}"
+                                 marginStart="5px" halign="end" valign="middle">
+                        <h:outputLabel value="Município:" id="ol9"
+                                       binding="#{backingBeanScope.backing_viewLatitudeLongitude.ol9}"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc20" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc20}"
+                                 width="25%" marginStart="5px">
+                        <af:inputText id="it9"
+                                      binding="#{backingBeanScope.backing_viewLatitudeLongitude.it9}"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                      value="#{backingBeanScope.backing_viewLatitudeLongitude.municipio}"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc21" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc21}"
+                                 marginStart="5px" halign="end" valign="middle">
+                        <h:outputLabel value="CEP:" id="ol10"
+                                       binding="#{backingBeanScope.backing_viewLatitudeLongitude.ol10}"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc22" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc22}"
+                                 width="25%" marginStart="5px">
+                        <af:inputText id="it10" binding="#{backingBeanScope.backing_viewLatitudeLongitude.it10}"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                      columns="12" value="#{backingBeanScope.backing_viewLatitudeLongitude.cep}"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc23" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc23}"
+                                 marginStart="5px" halign="end" valign="middle"/>
+                    <af:gridCell id="gc24" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc24}"
+                                 width="25%" marginStart="5px" marginEnd="5px"/>
+                </af:gridRow>
+            </af:panelGridLayout>
+            <af:panelGridLayout id="pgl3" binding="#{backingBeanScope.backing_viewLatitudeLongitude.pgl3}">
+                <af:gridRow marginTop="5px" height="auto" id="gr4"
+                            binding="#{backingBeanScope.backing_viewLatitudeLongitude.gr4}" marginBottom="5px">
+                    <af:gridCell marginStart="5px" width="50%" id="gc25"
+                                 binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc25}" valign="top"/>
+                    <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="gc26"
+                                 binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc26}" valign="top"/>
+                    <af:gridCell id="gc30" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc30}"
+                                 width="10%">
+                        <af:button text="Consultar" id="b1"
+                                   binding="#{backingBeanScope.backing_viewLatitudeLongitude.b1}"
+                                   inlineStyle="font-weight:bold; width:130px; background-color:Black; text-justify:auto; text-align:center;"
+                                   actionListener="#{backingBeanScope.backing_viewLatitudeLongitude.consultarLatitudeLongitude}"
+                                   immediate="false"/>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:showDetailHeader>
+        <af:showDetailHeader text="#{viewcontrollerBundle.LATITUDE_E_LONGITUDE}" disclosed="true" id="sdh1"
+                             binding="#{backingBeanScope.backing_viewLatitudeLongitude.sdh1}">
+            <f:facet name="context"/>
+            <f:facet name="menuBar"/>
+            <f:facet name="toolbar"/>
+            <f:facet name="legend"/>
+            <f:facet name="info"/>
+            <af:table value="#{bindings.ConsultaGoogleMapsReturnVO1.collectionModel}" var="row"
+                      rows="#{bindings.ConsultaGoogleMapsReturnVO1.rangeSize}"
+                      emptyText="#{bindings.ConsultaGoogleMapsReturnVO1.viewable ? 'Nenhum dado a ser exibido.' : 'Accesso Negado.'}"
+                      rowBandingInterval="0" fetchSize="#{bindings.ConsultaGoogleMapsReturnVO1.rangeSize}" id="t2"
+                      binding="#{backingBeanScope.backing_viewLatitudeLongitude.t2}"
+                      scrollPolicy="page"                         
+                      selectionListener="#{backingBeanScope.backing_viewLatitudeLongitude.selectLatLongListener}"
+                      rowSelection="single">
+                      <!--af:clientListener method="selectedRow" type="click"/>
+                      <af:serverListener type="selectedRow" method="#{backingBeanScope.backing_viewLatitudeLongitude.selectLatLongListener}"/-->
+                <af:column headerText="Latitude" id="c2" width="100">
+                    <af:outputText value="#{row.latitude}"
+                                   shortDesc="#{bindings.ConsultaGoogleMapsReturnVO1.hints.latitude.tooltip}" id="ot1"/>
+                </af:column>
+                <af:column headerText="Longitude" id="c9" width="100">
+                    <af:outputText value="#{row.longitude}"
+                                   shortDesc="#{bindings.ConsultaGoogleMapsReturnVO1.hints.longitude.tooltip}"
+                                   id="ot2"/>
+                </af:column>
+                <af:column headerText="Endereço" id="c10" width="400">
+                    <af:outputText value="#{row.endereco}"
+                                   shortDesc="#{bindings.ConsultaGoogleMapsReturnVO1.hints.endereco.tooltip}" id="ot9"/>
+                </af:column>
+                <af:column headerText="Bairro" id="c11" width="100">
+                    <af:outputText value="#{row.bairro}"
+                                   shortDesc="#{bindings.ConsultaGoogleMapsReturnVO1.hints.bairro.tooltip}" id="ot10"/>
+                </af:column>
+                <af:column headerText="País" id="c12" width="90">
+                    <af:outputText value="#{row.pais}"
+                                   shortDesc="#{bindings.ConsultaGoogleMapsReturnVO1.hints.pais.tooltip}" id="ot11"/>
+                </af:column>
+                <af:column headerText="Estado" id="c13" width="90">
+                    <af:outputText value="#{row.estado}"
+                                   shortDesc="#{bindings.ConsultaGoogleMapsReturnVO1.hints.estado.tooltip}" id="ot12"/>
+                </af:column>
+            </af:table>
+            
+            <af:panelGridLayout id="pgl2" binding="#{backingBeanScope.backing_viewLatitudeLongitude.pgl2}">
+                <af:gridRow marginTop="5px" height="auto" id="gr5"
+                            binding="#{backingBeanScope.backing_viewLatitudeLongitude.gr5}">
+                    <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc27"
+                                 binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc27}"/>
+                    <af:gridCell id="gc28" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc28}"
+                                 width="10%">
+                        <af:button text="OK" id="b2"
+                                   partialSubmit="false"
+                                   binding="#{backingBeanScope.backing_viewLatitudeLongitude.b2}"
+                                   inlineStyle="font-weight:bold; width:130px; background-color:Black; text-justify:auto; text-align:center; margin-right:5px;"
+                                   partialTriggers="b1">
+                                    <af:clientListener method="confirmaLatitudeLongitude" type="click"/>
+                                    <af:serverListener type="confirmaLatitudeLongitude" method="#{backingBeanScope.backing_viewLatitudeLongitude.confirmarLatitudeLongitude}"/>
+                        </af:button>           
+                    </af:gridCell>
+                    <af:gridCell id="gc29" binding="#{backingBeanScope.backing_viewLatitudeLongitude.gc29}"
+                                 width="10%">
+                       <af:button text="Cancelar" id="b3"
+                                    partialSubmit="true"
+                                    immediate="false"
+                                    binding="#{backingBeanScope.backing_viewLatitudeLongitude.b3}"
+                                    inlineStyle="font-weight:bold; width:130px; background-color:Black; text-justify:auto; text-align:center;"
+                                    >
+                                    <af:clientListener method="cancelaPopup" type="click"/>
+                                    <af:serverListener type="cancelaPopup" method="#{backingBeanScope.backing_viewLatitudeLongitude.cancelarPopup}"/>
+                        </af:button>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:showDetailHeader>
+    </af:panelWindow>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_viewLatitudeLongitude-->
+</ui:composition>

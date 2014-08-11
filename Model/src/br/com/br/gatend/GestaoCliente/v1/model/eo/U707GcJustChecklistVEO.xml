@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="U707GcJustChecklistVEO"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="GCL.U707_GC_JUST_CHECKLIST_V"
+  AliasName="U707GcJustChecklistVEO"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="LookupCode"
+    IsNotNull="true"
+    Precision="30"
+    ColumnName="LOOKUP_CODE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="GCL.U707_GC_JUST_CHECKLIST_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Meaning"
+    IsNotNull="true"
+    Precision="80"
+    ColumnName="MEANING"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="GCL.U707_GC_JUST_CHECKLIST_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="80"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Description"
+    Precision="240"
+    ColumnName="DESCRIPTION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="GCL.U707_GC_JUST_CHECKLIST_V">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="240"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="StartDateActive"
+    ColumnName="START_DATE_ACTIVE"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="GCL.U707_GC_JUST_CHECKLIST_V"/>
+  <Attribute
+    Name="EndDateActive"
+    ColumnName="END_DATE_ACTIVE"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="GCL.U707_GC_JUST_CHECKLIST_V"/>
+  <Attribute
+    Name="RowID"
+    IsUpdateable="false"
+    ColumnName="ROWID"
+    SQLType="ROWID"
+    Type="oracle.jbo.domain.RowID"
+    ColumnType="ROWID"
+    PrimaryKey="true"/>
+</Entity>

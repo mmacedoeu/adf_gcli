@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<faces-config version="2.1" xmlns="http://java.sun.com/xml/ns/javaee">
+  <application>
+    <default-render-kit-id>oracle.adf.rich</default-render-kit-id>
+    <resource-bundle>
+      <base-name></base-name>
+      <var></var>
+    </resource-bundle>
+    <locale-config>
+      <default-locale>pt-BR</default-locale>
+    </locale-config>
+  </application>
+  <navigation-rule>
+    <from-view-id>*</from-view-id>
+    <navigation-case>
+      <from-outcome>Novo Cliente</from-outcome>
+      <to-view-id>/JSF/NovoCliente.jsf</to-view-id>
+    </navigation-case>
+    <navigation-case>
+      <from-outcome>Consultar Cliente</from-outcome>
+      <to-view-id>/JSF/Consultar.jsf</to-view-id>
+    </navigation-case>
+    <navigation-case>
+      <from-outcome>Editar</from-outcome>
+      <to-view-id>/JSF/Editar.jsf</to-view-id>
+    </navigation-case>
+    <navigation-case>
+      <from-outcome>Index</from-outcome>
+      <to-view-id>/JSF/Index.jsf</to-view-id>
+    </navigation-case>
+    <navigation-case>
+      <from-outcome>Cancelar</from-outcome>
+      <to-view-id>/JSF/Cancelar.jsf</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+  
+</faces-config>

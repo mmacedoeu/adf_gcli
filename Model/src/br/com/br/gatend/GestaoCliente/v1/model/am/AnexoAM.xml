@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+
+<AppModule
+   xmlns="http://xmlns.oracle.com/bc4j"
+   Name="AnexoAM"
+   Version="12.1.3.10.8"
+   InheritPersonalization="merge"
+   ComponentClass="br.com.br.gatend.GestaoCliente.v1.model.am.AnexoAMImpl"
+   DefClass="br.com.br.gatend.GestaoCliente.v1.model.am.AnexoAMDefImpl"
+   ComponentInterface="br.com.br.gatend.GestaoCliente.v1.model.am.common.AnexoAM"
+   ClientProxyName="br.com.br.gatend.GestaoCliente.v1.model.am.client.AnexoAMClient"
+   ClearCacheOnRollback="true">
+   <DesignTime>
+      <Attr Name="_isDefCodegen" Value="true" />
+      <Attr Name="_isCodegen" Value="true" />
+   </DesignTime>
+   <Properties >
+      <SchemaBasedProperties >
+         <LABEL
+            ResId="br.com.br.gatend.GestaoCliente.v1.model.am.AnexoAM_LABEL" >
+         </LABEL>
+      </SchemaBasedProperties>
+   </Properties>
+   <ViewUsage
+      Name="CategoriaVO1"
+      ViewObjectName="br.com.br.gatend.GestaoCliente.v1.model.vo.CategoriaVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="ClienteVO1"
+      ViewObjectName="br.com.br.gatend.GestaoCliente.v1.model.vo.ClienteVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="FndLobsVO1"
+      ViewObjectName="br.com.br.gatend.GestaoCliente.v1.model.vo.FndLobsVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="FndDocumentsVO1"
+      ViewObjectName="br.com.br.gatend.GestaoCliente.v1.model.vo.FndDocumentsVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="FndDocumentsTLVO1"
+      ViewObjectName="br.com.br.gatend.GestaoCliente.v1.model.vo.FndDocumentsTLVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="FndAttachedDocumentsVO1"
+      ViewObjectName="br.com.br.gatend.GestaoCliente.v1.model.vo.FndAttachedDocumentsVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="U707GcAnexoVVO1"
+      ViewObjectName="br.com.br.gatend.GestaoCliente.v1.model.vo.U707GcAnexoVVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="U707GcCategAnexoVVO1"
+      ViewObjectName="br.com.br.gatend.GestaoCliente.v1.model.vo.U707GcCategAnexoVVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="HzPartiesU707GcClienteVVO1"
+      ViewObjectName="br.com.br.gatend.GestaoCliente.v1.model.vo.HzPartiesU707GcClienteVVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="ListaAnexoVO1"
+      ViewObjectName="br.com.br.gatend.GestaoCliente.v1.model.vo.ListaAnexoVO" >
+   </ViewUsage>
+   <ClientInterface
+      Name="__clientInterface" >
+      <Method
+         Name="pesquisarAnexosPorCliente"
+         MethodName="pesquisarAnexosPorCliente" >
+         <Return
+            Name="_return_type_"
+            Type="void" >
+         </Return>
+         <Parameter
+            Name="parametros"
+            Type="java.util.Map" >
+         </Parameter>
+      </Method>
+      <Method
+         Name="buscaDadosCliente"
+         MethodName="buscaDadosCliente" >
+         <Return
+            Name="_return_type_"
+            Type="java.lang.String" >
+         </Return>
+         <Parameter
+            Name="parametros"
+            Type="java.util.Map" >
+         </Parameter>
+      </Method>
+      <Method
+         Name="pesquisarAnexoPorId"
+         MethodName="pesquisarAnexoPorId" >
+         <Return
+            Name="_return_type_"
+            Type="java.util.Map" >
+         </Return>
+         <Parameter
+            Name="id"
+            Type="java.lang.String" >
+         </Parameter>
+      </Method>
+      <Method
+         Name="retornaNumeroSequecial"
+         MethodName="retornaNumeroSequecial" >
+         <Return
+            Name="_return_type_"
+            Type="java.lang.String" >
+         </Return>
+         <Parameter
+            Name="codigoCliente"
+            Type="java.lang.String" >
+         </Parameter>
+      </Method>
+      <Method
+         Name="removerAnexo"
+         MethodName="removerAnexo">
+         <Return
+            Name="_return_type_"
+            Type="java.lang.String"/>
+         <Parameter
+            Name="parametros"
+            Type="java.util.Map"/>
+      </Method>
+      <Method
+         Name="salvaAnexo"
+         MethodName="salvaAnexo">
+         <Return
+            Name="_return_type_"
+            Type="java.lang.String"/>
+         <Parameter
+            Name="parametros"
+            Type="java.util.Map"/>
+      </Method>
+   </ClientInterface>
+   <ResourceBundle >
+      <PropertiesBundle
+         PropertiesFile="br.com.br.gatend.GestaoCliente.v1.model.ModelBundle" >
+      </PropertiesBundle>
+   </ResourceBundle>
+</AppModule>

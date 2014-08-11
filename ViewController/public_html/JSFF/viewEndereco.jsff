@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:c="http://java.sun.com/jsp/jstl/core"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core" xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+    <c:set var="viewcontrollerBundle"
+           value="#{adfBundle['br.com.br.gatend.GestaoCliente.v1.view.ViewControllerBundle']}"/>
+    <af:panelBox id="pb1" binding="#{backingBeanScope.backing_viewEndereco.pb1}" showDisclosure="false">
+        <f:facet name="toolbar"/>
+        <af:panelHeader text="Endereço" id="ph1" binding="#{backingBeanScope.backing_viewEndereco.ph1}">
+            <f:facet name="context"/>
+            <f:facet name="menuBar"/>
+            <f:facet name="toolbar"/>
+            <f:facet name="legend"/>
+            <f:facet name="info"/>
+            <af:separator id="s1" binding="#{backingBeanScope.backing_viewEndereco.s1}"/>
+        </af:panelHeader>
+        <af:panelGroupLayout id="pgl1" binding="#{backingBeanScope.backing_viewEndereco.pgl1}" layout="horizontal"
+                             inlineStyle="width:1120px;">
+            <af:panelGroupLayout id="pgl2" binding="#{backingBeanScope.backing_viewEndereco.pgl2}">
+                <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_viewEndereco.pfl1}">
+                    <f:facet name="footer"/>
+                    <af:inputText label="CEP:" id="it1" binding="#{backingBeanScope.backing_viewEndereco.it1}"
+                                  contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                  columns="9"/>
+                    <af:inputText label="Logradouro:" id="it2" binding="#{backingBeanScope.backing_viewEndereco.it2}"
+                                  contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                  columns="65"/>
+                    <af:inputText label="Número:" id="it3" binding="#{backingBeanScope.backing_viewEndereco.it3}"
+                                  contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                  columns="10"/>
+                    <af:inputText label="Lote:" id="it4" binding="#{backingBeanScope.backing_viewEndereco.it4}"
+                                  contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                  columns="10"/>
+                    <af:inputText label="Bairro:" id="it5" binding="#{backingBeanScope.backing_viewEndereco.it5}"
+                                  contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                    <af:inputText label="Estado:" id="it6" binding="#{backingBeanScope.backing_viewEndereco.it6}"
+                                  contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                    <af:inputText label="Municipio:" id="it7" binding="#{backingBeanScope.backing_viewEndereco.it7}"
+                                  contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                    <af:selectOneChoice value="#{bindings.LocationSegmentDescription.inputValue}"
+                                        label="#{bindings.LocationSegmentDescription.label}"
+                                        required="#{bindings.LocationSegmentDescription.hints.mandatory}"
+                                        shortDesc="#{bindings.LocationSegmentDescription.hints.tooltip}" id="soc1"
+                                        binding="#{backingBeanScope.backing_viewEndereco.soc1}"
+                                        contentStyle="background-color: white;border-style:solid;border-color:black;">
+                        <f:selectItems value="#{bindings.LocationSegmentDescription.items}" id="si1"
+                                       binding="#{backingBeanScope.backing_viewEndereco.si1}"/>
+                        <f:validator binding="#{bindings.LocationSegmentDescription.validator}"/>
+                    </af:selectOneChoice>
+                </af:panelFormLayout>
+            </af:panelGroupLayout>
+            <af:panelGroupLayout id="pgl3" binding="#{backingBeanScope.backing_viewEndereco.pgl3}">
+                <af:panelFormLayout id="pfl2" binding="#{backingBeanScope.backing_viewEndereco.pfl2}">
+                    <f:facet name="footer"/>
+                    <af:inputText label="Complemento:" id="it8" binding="#{backingBeanScope.backing_viewEndereco.it8}"
+                                  contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                    <af:inputText label="Quadra:" id="it9" binding="#{backingBeanScope.backing_viewEndereco.it9}"
+                                  contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                  columns="10"/>
+                </af:panelFormLayout>
+            </af:panelGroupLayout>
+        </af:panelGroupLayout>
+        <af:popup childCreation="deferred" autoCancel="disabled" id="CodigoTemporario"
+                  binding="#{backingBeanScope.backing_viewEndereco.p1}">
+            <af:panelWindow id="pw1" binding="#{backingBeanScope.backing_viewEndereco.pw1}"
+                            inlineStyle="background-color:#e7e7e7;">
+                <af:panelHeader text="Confirmação de Cadastrado" id="ph2" binding="#{backingBeanScope.backing_viewEndereco.ph2}"
+                                messageType="confirmation">
+                    <f:facet name="context"/>
+                    <f:facet name="menuBar"/>
+                    <f:facet name="toolbar"/>
+                    <f:facet name="legend"/>
+                    <f:facet name="info"/>
+                    <af:outputText value="#{viewcontrollerBundle.FOI_CADASTRADO_CLIENTE_COM_C_U00F3DIGO_TEMPOR_U00E1RIO_XXXXX_}" id="ot1" binding="#{backingBeanScope.backing_viewEndereco.ot1}"/>
+                    <af:separator id="s3" binding="#{backingBeanScope.backing_viewEndereco.s3}"/>
+                    <af:outputText value="#{viewcontrollerBundle.DESEJA_CONTINUAR_COMPLETANDO_AS_INFORMA_U00E7_U00F5ES_DO_CLIENTE_}" id="ot2" binding="#{backingBeanScope.backing_viewEndereco.ot2}"/>
+                </af:panelHeader>
+                <af:separator id="s2" binding="#{backingBeanScope.backing_viewEndereco.s2}"/>
+                <af:panelGridLayout id="pgl4" binding="#{backingBeanScope.backing_viewEndereco.pgl4}">
+                    <af:gridRow marginTop="5px" height="auto" id="gr1"
+                                binding="#{backingBeanScope.backing_viewEndereco.gr1}">
+                        <af:gridCell id="gc2" binding="#{backingBeanScope.backing_viewEndereco.gc2}" width="10%"
+                                     halign="end">
+                            <af:button text="Sim" id="b2" binding="#{backingBeanScope.backing_viewEndereco.b2}"
+                                       inlineStyle="font-weight:bold; width:50px; border-width:thick; background-color:Black; text-justify:auto; text-align:center;"/>
+                        </af:gridCell>
+                        <af:gridCell id="gc3" binding="#{backingBeanScope.backing_viewEndereco.gc3}" width="5%"
+                                     halign="end">
+                            <af:button text="Não" id="b3" binding="#{backingBeanScope.backing_viewEndereco.b3}"
+                                       inlineStyle="font-weight:bold; width:50px; border-width:thick; background-color:Black; text-justify:auto; text-align:center;"/>
+                        </af:gridCell>
+                    </af:gridRow>
+                </af:panelGridLayout>
+            </af:panelWindow>
+        </af:popup>
+    </af:panelBox>
+    <af:panelGridLayout id="pgl5" binding="#{backingBeanScope.backing_viewEndereco.pgl5}">
+        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr2"
+                    binding="#{backingBeanScope.backing_viewEndereco.gr2}">
+            <af:gridCell marginStart="5px" width="80%" id="gc1" binding="#{backingBeanScope.backing_viewEndereco.gc1}"
+                         halign="end">
+                <af:button text="Limpar" id="b4" binding="#{backingBeanScope.backing_viewEndereco.b4}"
+                           inlineStyle="font-weight:bold; width:130px; border-width:thick; background-color:Black; text-justify:auto; text-align:center;"/>
+                <af:spacer width="30" height="10" id="s4" binding="#{backingBeanScope.backing_viewEndereco.s4}"/>
+                <af:button text="Salvar" id="b1" binding="#{backingBeanScope.backing_viewEndereco.b1}"
+                           inlineStyle="font-weight:bold; width:130px; border-width:thick; background-color:Black; text-justify:auto; text-align:center;">
+                    <af:showPopupBehavior popupId="CodigoTemporario" triggerType="action"/>
+                </af:button>
+            </af:gridCell>
+        </af:gridRow>
+    </af:panelGridLayout>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_viewEndereco-->
+</ui:composition>

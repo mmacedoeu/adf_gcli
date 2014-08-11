@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core"
+                    xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <c:set var="viewcontrollerBundle"
+           value="#{adfBundle['br.com.br.gatend.GestaoCliente.v1.view.ViewControllerBundle']}"/>
+    <af:decorativeBox id="pt_db1" topHeight="72px" theme="light"
+                      inlineStyle="border-bottom-width:medium; outline-style:none; outline-width:medium;"
+                      dimensionsFrom="parent">
+        <f:facet name="center">
+            <af:panelSplitter id="pt_ps1" splitterPosition="200" orientation="horizontal" disabled="false"
+                              inlineStyle="width:auto; height:auto;" dimensionsFrom="children">
+                <f:facet name="first">
+                    <af:panelGridLayout id="pt_pgl3">
+                        <af:gridRow marginTop="5px" height="auto" id="pt_gr2">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="pt_gc3">
+                                <af:panelAccordion id="pt_pa1" inlineStyle="width:217px;" discloseNone="true">
+                                    <af:showDetailItem id="pt_sdi1" text="#{viewcontrollerBundle.CLIENTES}">
+                                        <af:panelGridLayout id="pt_pgl4">
+                                            <af:gridRow marginTop="5px" height="auto" id="pt_gr5">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                             id="pt_gc5">
+                                                    <af:menuBar id="pt_mb1">
+                                                        <af:commandMenuItem text="#{viewcontrollerBundle.CONSULTAR}" id="pt_cmi1"
+                                                                            action="Consultar Cliente"/>
+                                                    </af:menuBar>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="pt_gr6">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                             id="pt_gc7">
+                                                    <af:menuBar id="pt_mb2">
+                                                        <af:commandMenuItem text="#{viewcontrollerBundle.NOVO}" id="pt_cmi2"
+                                                                            action="Novo Cliente"/>
+                                                    </af:menuBar>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="pt_gr7">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                             id="pt_gc8">
+                                                    <af:menuBar id="pt_mb3">
+                                                        <af:commandMenuItem text="#{viewcontrollerBundle.EDITAR}" id="pt_cmi3"
+                                                                            action="Editar"/>
+                                                    </af:menuBar>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="pt_gr8">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                             id="pt_gc9">
+                                                    <af:menuBar id="pt_mb4">
+                                                        <af:commandMenuItem text="#{viewcontrollerBundle.ACIONISTAS}" id="pt_cmi4"/>
+                                                    </af:menuBar>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr9">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                             id="pt_gc10">
+                                                    <af:menuBar id="pt_mb5">
+                                                        <af:commandMenuItem text="#{viewcontrollerBundle.BLOQUEIO}" id="pt_cmi5"/>
+                                                    </af:menuBar>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
+                                    </af:showDetailItem>
+                                    <af:showDetailItem text="#{viewcontrollerBundle.CLIENTE_FORNECEDOR}" id="pt_sdi2">
+                                        <af:panelGridLayout id="pt_pgl5">
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr10">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                             id="pt_gc11">
+                                                    <af:menuBar id="pt_mb6">
+                                                        <af:commandMenuItem text="#{viewcontrollerBundle.NOVO}" id="pt_cmi6"/>
+                                                    </af:menuBar>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
+                                    </af:showDetailItem>
+                                    <af:showDetailItem text="#{viewcontrollerBundle.CANCELAR_CLIENTE}" id="pt_sdi6">
+                                        <af:panelGridLayout id="pt_pgl9">
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr22">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                             id="pt_gc23">
+                                                    <af:menuBar id="pt_mb15">
+                                                        <af:commandMenuItem text="#{viewcontrollerBundle.C_U00F3DIGO_TEMPOR_U00E1RIO}" id="pt_cmi15"
+                                                                            action="Cancelar"/>
+                                                    </af:menuBar>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
+                                    </af:showDetailItem>
+                                    <af:showDetailItem text="#{viewcontrollerBundle.RELAT_U00F3RIOS}" id="pt_sdi3">
+                                        <af:panelGridLayout id="pt_pgl6">
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr11">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                             id="pt_gc12">
+                                                    <af:menuBar id="pt_mb7">
+                                                        <af:commandMenuItem text="#{viewcontrollerBundle.AUDITORIA}" id="pt_cmi7"/>
+                                                    </af:menuBar>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow id="pt_gr16">
+                                                <af:gridCell id="pt_gc17">
+                                                    <af:menuBar id="pt_mb11">
+                                                        <af:commandMenuItem text="#{viewcontrollerBundle.CONTATO}" id="pt_cmi11"/>
+                                                    </af:menuBar>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow id="pt_gr17">
+                                                <af:gridCell id="pt_gc18">
+                                                    <af:menuBar id="pt_mb12">
+                                                        <af:commandMenuItem text="#{viewcontrollerBundle.CONTROLE_GERENCIAL}" id="pt_cmi12"/>
+                                                    </af:menuBar>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
+                                    </af:showDetailItem>
+                                    <af:showDetailItem text="#{viewcontrollerBundle.WORKFLOW}" id="pt_sdi4"
+                                                       rendered="true">
+                                        <af:panelGridLayout id="pt_pgl7">
+                                            <af:gridRow marginTop="5px" height="auto" id="pt_gr12">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                             id="pt_gc13">
+                                                    <af:menuBar id="pt_mb8">
+                                                        <af:commandMenuItem text="#{viewcontrollerBundle.NOTIFICA_U00E7_U00F5ES}" id="pt_cmi8"/>
+                                                    </af:menuBar>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr13">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                             id="pt_gc14">
+                                                    <af:menuBar id="pt_mb9">
+                                                        <af:commandMenuItem text="#{viewcontrollerBundle.NOTIFICA_U00E7_U00F5ES___MONITOR_DE_STATUS_}" id="pt_cmi9"/>
+                                                    </af:menuBar>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
+                                    </af:showDetailItem>
+                                    <af:showDetailItem text="#{viewcontrollerBundle.ADMINISTRA_U00E7_U00E3O}" id="pt_sdi5">
+                                        <af:panelGridLayout id="pt_pgl8">
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr14">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                                             id="pt_gc15">
+                                                    <af:menuBar id="pt_mb10">
+                                                        <af:commandMenuItem text="#{viewcontrollerBundle.BANCO_EMPRESA}" id="pt_cmi10"/>
+                                                    </af:menuBar>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow id="pt_gr18">
+                                                <af:gridCell id="pt_gc19" width="100%">
+                                                    <af:menuBar id="pt_mb13">
+                                                        <af:commandMenuItem text="#{viewcontrollerBundle.DICION_U00E1RIO_DE_ABREVIATURAS}" id="pt_cmi13"/>
+                                                    </af:menuBar>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow id="pt_gr19">
+                                                <af:gridCell id="pt_gc20">
+                                                    <af:menuBar id="pt_mb14">
+                                                        <af:commandMenuItem text="#{viewcontrollerBundle.AVISO_DE_CONTATOS}" id="pt_cmi14"/>
+                                                    </af:menuBar>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
+                                    </af:showDetailItem>
+                                </af:panelAccordion>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </f:facet>
+                <f:facet name="second">
+                    <af:panelGridLayout id="pt_pgl2">
+                        <af:gridRow marginTop="5px" height="auto" id="pt_gr3">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="pt_gc4" halign="center"
+                                         valign="middle">
+                                <af:outputFormatted value="#{attrs.title1}" id="pt_of1"
+                                                    inlineStyle="color:darkslategray; font-size:large; font-weight:bold; text-align:left; font-style:normal;"/>
+                                <af:separator id="pt_s1"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr4">
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="pt_gc6" halign="stretch"
+                                         valign="stretch">
+                                <af:facetRef facetName="rownum1"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="pt_gr15">
+                            <af:gridCell id="pt_gc16" width="100%" marginStart="5px" marginEnd="5px" halign="stretch"
+                                         valign="stretch">
+                                <af:facetRef facetName="rownum2"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="pt_gr20">
+                            <af:gridCell id="pt_gc21">
+                                <af:facetRef facetName="center"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </f:facet>
+            </af:panelSplitter>
+        </f:facet>
+        <f:facet name="top">
+            <af:panelGridLayout id="pt_pgl1" inlineStyle="height:400px;">
+                <af:gridRow marginTop="5px" height="auto" id="pt_gr1" marginBottom="5px">
+                    <af:gridCell marginStart="5px" width="650px" id="pt_gc1" inlineStyle="height:auto; width:300px;">
+                        <af:image source="../IMAGEM/Logo_BR.jpg" id="pt_i1" inlineStyle="height:40px;"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="700px" marginEnd="5px" id="pt_gc2" valign="middle">
+                        <af:outputText value="Gestão de Clientes" id="pt_ot1"
+                                       inlineStyle="font-size:large; font-style:normal; font-weight:bold; text-align:left; color:#116C3A;"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow id="pt_gr21">
+                    <af:gridCell id="pt_gc22" columnSpan="2" width="auto"
+                                 inlineStyle="margin-right:0px; padding-right:0px; margin-top:0px; margin-bottom:0px; padding-top:0px;" halign="end">
+                        <af:menuBar id="pt_mb16">
+                            <af:goMenuItem text="Menu Principal" id="pt_gmi1"
+                                           destination="#{ebs_url}/OA_HTML/OA.jsp?OAFunc=OAHOMEPAGE "/>
+                            <af:commandMenuItem text="Sair" id="pt_cmi16" action="#{templateMB.sair}"
+                             windowHeight="400" windowWidth="550"/>
+                        </af:menuBar>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </f:facet>
+    </af:decorativeBox>
+    <af:xmlContent>
+        <afc:component>
+            <afc:description/>
+            <afc:display-name>TemplateBRFocus</afc:display-name>
+            <afc:facet>
+                <afc:facet-name>rownum1</afc:facet-name>
+            </afc:facet>
+            <afc:facet>
+                <afc:facet-name>rownum2</afc:facet-name>
+            </afc:facet>
+            <afc:facet>
+                <afc:facet-name>center</afc:facet-name>
+            </afc:facet>
+            <afc:attribute>
+                <afc:attribute-name>title1</afc:attribute-name>
+                <afc:attribute-class>java.lang.String</afc:attribute-class>
+                <afc:default-value>default title</afc:default-value>
+            </afc:attribute>
+            <afc:attribute>
+                <afc:attribute-name>title2</afc:attribute-name>
+                <afc:attribute-class>java.lang.String</afc:attribute-class>
+                <afc:default-value>default title</afc:default-value>
+            </afc:attribute>
+        </afc:component>
+    </af:xmlContent>
+</af:pageTemplateDef>

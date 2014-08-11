@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.2.66.68" id="view_consulta_clientesPageDef"
+                Package="br.com.br.gatend.gestor.clientes.view.pageDefs">
+    <parameters/>
+    <executables>
+        <variableIterator id="variables"/>
+        <iterator Binds="ConsultaClientesVO1" RangeSize="-1" DataControl="ClientesAMDataControl"
+                  id="ConsultaClientesVO1Iterator"/>
+        <searchRegion Criteria="ConsultaClientesVOCriteria"
+                      Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                      Binds="ConsultaClientesVO1Iterator" id="ConsultaClientesVOCriteriaQuery1"/>
+        <iterator Binds="PerfilVO1" RangeSize="25" DataControl="ClientesAMDataControl" id="PerfilVO1Iterator"/>
+        <iterator Binds="FndLookUpValuesVLU707GcPerfilClienteVVO1" RangeSize="25" DataControl="ClientesAMDataControl"
+                  id="FndLookUpValuesVLU707GcPerfilClienteVVO1Iterator"/>
+        <iterator Binds="FndLookUpValuesVLU707GcOrigemClienteVVO1" RangeSize="25" DataControl="ClientesAMDataControl"
+                  id="FndLookUpValuesVLU707GcOrigemClienteVVO1Iterator"/>
+    </executables>
+    <bindings>
+        <tree IterBinding="ConsultaClientesVO1Iterator" id="ConsultaClientesVO1">
+            <nodeDefinition DefName="br.com.br.gatend.GestaoCliente.v1.model.vo.ConsultaClientesVO"
+                            Name="ConsultaClientesVO10">
+                <AttrNames>
+                    <Item Value="RazaoSocial"/>
+                    <Item Value="TipoCliente"/>
+                    <Item Value="CodigoR3"/>
+                    <Item Value="Logradouro"/>
+                    <Item Value="Bairro"/>
+                    <Item Value="Cidade"/>
+                    <Item Value="Estado"/>
+                    <Item Value="Origem"/>
+                    <Item Value="Perfil"/>
+                    <Item Value="Principal"/>
+                </AttrNames>
+            </nodeDefinition>
+        </tree>
+        <list IterBinding="FndLookUpValuesVLU707GcPerfilClienteVVO1Iterator" ListOperMode="navigation"
+              ListIter="FndLookUpValuesVLU707GcPerfilClienteVVO1Iterator" id="FndLookUpValuesVLU707GcPerfilClienteVVO1"
+              DTSupportsMRU="true" SelectItemValueMode="ListObject">
+            <AttrNames>
+                <Item Value="Meaning"/>
+            </AttrNames>
+        </list>
+        <list IterBinding="FndLookUpValuesVLU707GcOrigemClienteVVO1Iterator" ListOperMode="navigation"
+              ListIter="FndLookUpValuesVLU707GcOrigemClienteVVO1Iterator" id="FndLookUpValuesVLU707GcOrigemClienteVVO1"
+              DTSupportsMRU="true" SelectItemValueMode="ListObject">
+            <AttrNames>
+                <Item Value="Meaning"/>
+            </AttrNames>
+        </list>
+        <methodAction id="validaPrivilegioAcessoClientes" RequiresUpdateModel="true" Action="invokeMethod"
+                      MethodName="validaPrivilegioAcessoClientes" IsViewObjectMethod="false"
+                      DataControl="ClientesAMDataControl" InstanceName="data.ClientesAMDataControl.dataProvider"
+                      ReturnName="data.ClientesAMDataControl.methodResults.validaPrivilegioAcessoClientes_ClientesAMDataControl_dataProvider_validaPrivilegioAcessoClientes_result">
+            <NamedData NDName="parametros" NDType="java.util.Map"/>
+        </methodAction>
+        <methodAction id="localizarClientePeloCodigoR3" RequiresUpdateModel="true" Action="invokeMethod"
+                      MethodName="localizarClientePeloCodigoR3" IsViewObjectMethod="false"
+                      DataControl="ClientesAMDataControl" InstanceName="data.ClientesAMDataControl.dataProvider"
+                      ReturnName="data.ClientesAMDataControl.methodResults.localizarClientePeloCodigoR3_ClientesAMDataControl_dataProvider_localizarClientePeloCodigoR3_result">
+            <NamedData NDName="parametros" NDType="java.util.Map"/>
+        </methodAction>
+        <methodAction id="localizarClientes" RequiresUpdateModel="true" Action="invokeMethod"
+                      MethodName="localizarClientes" IsViewObjectMethod="false" DataControl="ClientesAMDataControl"
+                      InstanceName="data.ClientesAMDataControl.dataProvider"
+                      ReturnName="data.ClientesAMDataControl.methodResults.localizarClientes_ClientesAMDataControl_dataProvider_localizarClientes_result">
+            <NamedData NDName="parametros" NDType="java.util.Map"/>
+        </methodAction>
+        <methodAction id="localizarPaisCliente" RequiresUpdateModel="true" Action="invokeMethod"
+                      MethodName="localizarPaisCliente" IsViewObjectMethod="false" DataControl="ClientesAMDataControl"
+                      InstanceName="data.ClientesAMDataControl.dataProvider"
+                      ReturnName="data.ClientesAMDataControl.methodResults.localizarPaisCliente_ClientesAMDataControl_dataProvider_localizarPaisCliente_result">
+            <NamedData NDName="parametros" NDType="java.util.Map"/>
+        </methodAction>
+    </bindings>
+</pageDefinition>

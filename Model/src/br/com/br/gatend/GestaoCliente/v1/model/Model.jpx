@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+<!---->
+<JboProject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Model"
+  Version="12.1.2.66.68"
+  SeparateXMLFiles="true"
+  PackageName="br.com.br.gatend.GestaoCliente.v1.model">
+  <DesignTime>
+    <Attr Name="_jprName" Value="../../../../../../../../Model.jpr"/>
+    <Attr Name="_domainNames0" Value="br.com.br.gatend.GestaoCliente.v1.model.SdoGeometry"/>
+    <Attr Name="_domainNames1" Value="br.com.br.gatend.GestaoCliente.v1.model.SdoPointType"/>
+    <Attr Name="_appModuleNames3" Value="br.com.br.gatend.GestaoCliente.v1.model.am.LatitudeLongitudeAM"/>
+    <Attr Name="_appModuleNames2" Value="br.com.br.gatend.GestaoCliente.v1.model.am.CheckList"/>
+    <Attr Name="_appModuleNames4" Value="br.com.br.gatend.GestaoCliente.v1.model.am.AnexoAM"/>
+    <Attr Name="_appModuleNames1" Value="br.com.br.gatend.GestaoCliente.v1.model.am.ClientesAM"/>
+    <Attr Name="_appModuleNames0" Value="br.com.br.gatend.GestaoCliente.v1.model.am.ProspectsAM"/>
+    <Attr Name="_appModuleNames6" Value="br.com.br.gatend.GestaoCliente.v1.model.am.common.CepAM"/>
+    <Attr Name="_appModuleNames5" Value="br.com.br.gatend.GestaoCliente.v1.model.am.common.LocaisAM"/>
+    <Attr Name="_NamedConnection" Value="CRP3"/>
+    <Attr Name="_appModuleNames7" Value="br.com.br.gatend.GestaoCliente.v1.model.am.CancelarClienteAM"/>
+    <Attr Name="_appModuleNames8" Value="br.com.br.gatend.GestaoCliente.v1.model.am.NovoClienteAM"/>
+  </DesignTime>
+  <Containee
+    Name="am"
+    PackageName="br.com.br.gatend.GestaoCliente.v1.model.am"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="common"
+    PackageName="br.com.br.gatend.GestaoCliente.v1.model.am.common"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="association"
+    PackageName="br.com.br.gatend.GestaoCliente.v1.model.eo.association"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AS" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="eo"
+    PackageName="br.com.br.gatend.GestaoCliente.v1.model.eo"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_EO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="model"
+    PackageName="br.com.br.gatend.GestaoCliente.v1.model"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_DO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="vo"
+    PackageName="br.com.br.gatend.GestaoCliente.v1.model.vo"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+      <Attr Name="_VL" Value="true"/>
+    </DesignTime>
+  </Containee>
+</JboProject>

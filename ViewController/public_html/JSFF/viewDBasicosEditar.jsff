@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <c:set var="viewcontrollerBundle"
+           value="#{adfBundle['br.com.br.gatend.GestaoCliente.v1.view.ViewControllerBundle']}"/>
+    <af:panelBox id="pb1" binding="#{backingBeanScope.backing_viewDBasicosEditar.pb1}" showDisclosure="false">
+        <f:facet name="toolbar"/>
+        <af:panelHeader text="Dados Básicos" id="ph1" binding="#{backingBeanScope.backing_viewDBasicosEditar.ph1}">
+            <f:facet name="context"/>
+            <f:facet name="menuBar"/>
+            <f:facet name="toolbar"/>
+            <f:facet name="legend"/>
+            <f:facet name="info"/>
+            <af:separator id="s2" binding="#{backingBeanScope.backing_viewDBasicosEditar.s2}"/>
+            <af:panelGroupLayout id="pgl1" binding="#{backingBeanScope.backing_viewDBasicosEditar.pgl1}"
+                                 inlineStyle="width:1021px;" layout="horizontal">
+                <af:panelGroupLayout id="pgl2" binding="#{backingBeanScope.backing_viewDBasicosEditar.pgl2}">
+                    <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_viewDBasicosEditar.pfl1}">
+                        <af:inputText label="Origem:" id="it1"
+                                      binding="#{backingBeanScope.backing_viewDBasicosEditar.it1}"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                      value="#{backingBeanScope.backing_viewDBasicosEditar.origem}"/>
+                        <af:inputText label="Perfil:" id="it3"
+                                      binding="#{backingBeanScope.backing_viewDBasicosEditar.it3}"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                      value="#{backingBeanScope.backing_viewDBasicosEditar.perfil}"/>
+                        <af:inputText label="CNPJ/CPF:" id="it4"
+                                      binding="#{backingBeanScope.backing_viewDBasicosEditar.it4}"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                      value="#{backingBeanScope.backing_viewDBasicosEditar.tipoCliente}"/>
+                        <af:inputText label="Razão Social/Nome:" id="it5"
+                                      binding="#{backingBeanScope.backing_viewDBasicosEditar.it5}" columns="60"
+                                      maximumLength="35"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                      value="#{backingBeanScope.backing_viewDBasicosEditar.razaoSocial}"/>
+                        <af:inputText label="Apelido:" id="it6"
+                                      binding="#{backingBeanScope.backing_viewDBasicosEditar.it6}"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                      maximumLength="60" columns="60"/>
+                        <f:facet name="footer"/>
+                    </af:panelFormLayout>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout id="pgl3" binding="#{backingBeanScope.backing_viewDBasicosEditar.pgl3}">
+                    <af:panelFormLayout id="pfl2" binding="#{backingBeanScope.backing_viewDBasicosEditar.pfl2}">
+                        <f:facet name="footer"/>
+                        <af:inputText label="Cód.Cliente:" id="it2"
+                                      binding="#{backingBeanScope.backing_viewDBasicosEditar.it2}"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                      value="#{backingBeanScope.backing_viewDBasicosEditar.codigoR3}"/>
+                        <af:inputText label="Grupo de Contas:" id="it7"
+                                      binding="#{backingBeanScope.backing_viewDBasicosEditar.it7}"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                        <af:spacer width="10" height="10" id="s1"
+                                   binding="#{backingBeanScope.backing_viewDBasicosEditar.s1}"/>
+                        <af:inputText label="Inscrição Estadual:" id="it10"
+                                      binding="#{backingBeanScope.backing_viewDBasicosEditar.it10}"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                        <af:inputText label="Inscrição Municipal:" id="it8"
+                                      binding="#{backingBeanScope.backing_viewDBasicosEditar.it8}"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                        <af:inputText label="Categoria CFOP:" id="it9"
+                                      binding="#{backingBeanScope.backing_viewDBasicosEditar.it9}"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                    </af:panelFormLayout>
+                </af:panelGroupLayout>
+            </af:panelGroupLayout>
+        </af:panelHeader>
+    </af:panelBox>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_viewDBasicosEditar-->
+    </ui:composition>

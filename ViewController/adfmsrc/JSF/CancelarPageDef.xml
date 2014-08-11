@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.2.66.68" id="CancelarPageDef" Package="JSF">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="taskflowCancelar1" taskFlowId="/WEB-INF/task-flow-Cancelar.xml#task-flow-Cancelar"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+  </executables>
+  <bindings>
+    <methodAction id="getUserId" RequiresUpdateModel="true" Action="invokeMethod" MethodName="getUserId"
+                  IsViewObjectMethod="false" DataControl="CancelarClienteAMDataControl"
+                  InstanceName="data.CancelarClienteAMDataControl.dataProvider"
+                  ReturnName="data.CancelarClienteAMDataControl.methodResults.getUserId_CancelarClienteAMDataControl_dataProvider_getUserId_result"/>
+    <methodAction id="validaPrivilegioAcessoClientes" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="validaPrivilegioAcessoClientes" IsViewObjectMethod="false"
+                  DataControl="CancelarClienteAMDataControl"
+                  InstanceName="data.CancelarClienteAMDataControl.dataProvider"
+                  ReturnName="data.CancelarClienteAMDataControl.methodResults.validaPrivilegioAcessoClientes_CancelarClienteAMDataControl_dataProvider_validaPrivilegioAcessoClientes_result">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+    <methodAction id="getPrivilegioAcesso" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="getPrivilegioAcesso" IsViewObjectMethod="false" DataControl="CancelarClienteAMDataControl"
+                  InstanceName="data.CancelarClienteAMDataControl.dataProvider"
+                  ReturnName="data.CancelarClienteAMDataControl.methodResults.getPrivilegioAcesso_CancelarClienteAMDataControl_dataProvider_getPrivilegioAcesso_result">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>

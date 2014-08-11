@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core" xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <c:set var="viewcontrollerBundle"
+           value="#{adfBundle['br.com.br.gatend.GestaoCliente.v1.view.ViewControllerBundle']}"/>
+    <af:panelBox text="#{viewcontrollerBundle.CLIENTE}" id="pb1">
+        <f:facet name="toolbar"/>
+        <af:panelGroupLayout id="pgl2" layout="scroll" inlineStyle="width:1088px;height:90px;">
+            <af:panelGroupLayout id="pgl1" layout="scroll" inlineStyle="width:1088px;height:90px;">
+                <af:table var="row" rowBandingInterval="0" id="t1"
+                          inlineStyle="height:96px; background-color:#e7e7e7; color:#840000;">
+                    <af:column sortable="false" headerText="Telefone" id="c1" align="center">
+                        <af:column sortable="false" headerText="Cód.País" id="c3">
+                            <af:outputText value="55" id="ot2"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Cód.Área" id="c2">
+                            <af:outputText value="21" id="ot1"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Telefone" id="c4">
+                            <af:outputText value="2334-9067" id="ot3"/>
+                        </af:column>
+                        <af:column id="c8" headerText="Ramal"/>
+                        <af:column id="c9" headerText="Tipo Telefone">
+                            <af:selectOneChoice id="soc1">
+                                <af:selectItem label="Comercial" value="Comercial" id="si1"/>
+                                <af:selectItem label="Celular" value="Celular" id="si2"/>
+                            </af:selectOneChoice>
+                        </af:column>
+                        <af:column id="c14" headerText="Principal"/>
+                        <af:column id="c15" headerText="Objetivo"/>
+                        <af:column id="c16" headerText="Ativo"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Email" id="c5" align="center">
+                        <af:column sortable="false" headerText="Ender.Email" id="c6" width="220">
+                            <af:outputText value="Robertoabravanel@gmail.com" id="ot4"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Tipo Email" id="c7">
+                            <af:outputText value="#{row.col5}" id="ot5"/>
+                        </af:column>
+                        <af:column id="c10" headerText="Formato"/>
+                        <af:column id="c11" headerText="Principal"/>
+                        <af:column id="c12" headerText="Objetivo"/>
+                        <af:column id="c13" headerText="Ativo"/>
+                    </af:column>
+                </af:table>
+            </af:panelGroupLayout>
+        </af:panelGroupLayout>
+    </af:panelBox>
+    <af:panelBox text="#{viewcontrollerBundle.CONTATO_CLIENTE}" id="pb2">
+        <f:facet name="toolbar"/>
+    </af:panelBox>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_viewComunicacao-->
+</ui:composition>

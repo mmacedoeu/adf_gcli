@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <af:panelGroupLayout id="pgl1" binding="#{backingBeanScope.backing_viewGeraisEdit.pgl1}" layout="horizontal">
+        <af:panelGroupLayout id="pgl2" binding="#{backingBeanScope.backing_viewGeraisEdit.pgl2}">
+            <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_viewGeraisEdit.pfl1}">
+                <f:facet name="footer"/>
+                <af:inputText label="Sociedade Parceira:" id="it1" binding="#{backingBeanScope.backing_viewGeraisEdit.it1}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Setor Industrial:" id="it2" binding="#{backingBeanScope.backing_viewGeraisEdit.it2}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Zona de Transporte:" id="it3" binding="#{backingBeanScope.backing_viewGeraisEdit.it3}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Grupo Subfiscal:" id="it4" binding="#{backingBeanScope.backing_viewGeraisEdit.it4}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Zona Nielsen:" id="it5" binding="#{backingBeanScope.backing_viewGeraisEdit.it5}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Classe de Cliente:" id="it6" binding="#{backingBeanScope.backing_viewGeraisEdit.it6}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="SIAF:" id="it7" binding="#{backingBeanScope.backing_viewGeraisEdit.it7}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Atividade ANP:" id="it8" binding="#{backingBeanScope.backing_viewGeraisEdit.it8}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Atributo9:" id="it9" binding="#{backingBeanScope.backing_viewGeraisEdit.it9}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Dt.Conquista do Cliente:" id="it11" binding="#{backingBeanScope.backing_viewGeraisEdit.it11}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+            </af:panelFormLayout>
+        </af:panelGroupLayout>
+        <af:panelGroupLayout id="pgl3" binding="#{backingBeanScope.backing_viewGeraisEdit.pgl3}">
+            <af:panelFormLayout id="pfl2" binding="#{backingBeanScope.backing_viewGeraisEdit.pfl2}">
+                <f:facet name="footer"/>
+                <af:inputText label="VIP:" id="it10" binding="#{backingBeanScope.backing_viewGeraisEdit.it10}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Restrições de Entrega:" id="it12" binding="#{backingBeanScope.backing_viewGeraisEdit.it12}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Idioma:" id="it13" binding="#{backingBeanScope.backing_viewGeraisEdit.it13}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Novo Cliente:" id="it14" binding="#{backingBeanScope.backing_viewGeraisEdit.it14}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Indicador de Pagto Antecipado:" id="it15" binding="#{backingBeanScope.backing_viewGeraisEdit.it15}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Grupo de Responsáveis:" id="it16" binding="#{backingBeanScope.backing_viewGeraisEdit.it16}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Grupo Empresa:" id="it17" binding="#{backingBeanScope.backing_viewGeraisEdit.it17}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="De Olho no Combustível:" id="it18" binding="#{backingBeanScope.backing_viewGeraisEdit.it18}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Nome Fantasia:" id="it19" binding="#{backingBeanScope.backing_viewGeraisEdit.it19}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"
+                              maximumLength="100" columns="60"/>
+                <af:spacer width="10" height="10" id="s1" binding="#{backingBeanScope.backing_viewGeraisEdit.s1}"/>
+            </af:panelFormLayout>
+        </af:panelGroupLayout>
+    </af:panelGroupLayout>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_viewGeraisEdit-->
+</ui:composition>

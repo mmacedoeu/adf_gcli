@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:f="http://java.sun.com/jsf/core">
+    <c:set var="viewcontrollerBundle"
+           value="#{adfBundle['br.com.br.gatend.GestaoCliente.v1.view.ViewControllerBundle']}"/>
+    <af:panelBox id="pb1" showDisclosure="false">
+        <f:facet name="toolbar"/>
+        <af:panelHeader text="Dados Básicos" id="ph1">
+            <f:facet name="context"/>
+            <f:facet name="menuBar">
+                <af:popup childCreation="deferred" autoCancel="disabled" id="CopiaDadosClientes">
+                    <af:panelWindow id="pw1" inlineStyle="background-color:#e7e7e7;">
+                        <af:panelHeader text="Cópia de dados do cliente" id="ph2" messageType="warning">
+                            <f:facet name="context"/>
+                            <f:facet name="menuBar"/>
+                            <f:facet name="toolbar"/>
+                            <f:facet name="legend"/>
+                            <f:facet name="info"/>
+                            <af:panelFormLayout id="pfl1">
+                                <f:facet name="footer"/>
+                                <af:inputListOfValues label="Cód.Temporário / R3:" popupTitle="Search and Result Dialog"
+                                                      id="ilov2"
+                                                      contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                                <af:inputListOfValues label="CNPJ / CPF:" popupTitle="Search and Result Dialog"
+                                                      id="ilov1"
+                                                      contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                            </af:panelFormLayout>
+                            <af:panelGridLayout id="pgl2">
+                                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
+                                    <af:gridCell marginStart="5px" width="5%" id="gc24" halign="end">
+                                        <af:button text="OK" id="b2"
+                                                   inlineStyle="font-weight:bold; width:57px; border-width:thick; background-color:Black; text-justify:auto; text-align:center;"/>
+                                        <af:spacer width="30" height="10" id="s2"/>
+                                        <af:button text="Cancelar" id="b3"
+                                                   inlineStyle="font-weight:bold; width:57px; border-width:thick; background-color:Black; text-justify:auto; text-align:center;"/>
+                                    </af:gridCell>
+                                </af:gridRow>
+                            </af:panelGridLayout>
+                        </af:panelHeader>
+                    </af:panelWindow>
+                </af:popup>
+                <af:button text="Copiar dados" id="b1"
+                           inlineStyle="font-weight:bold; width:90px; border-width:thick; background-color:Black; text-justify:auto; text-align:center;">
+                    <af:showPopupBehavior triggerType="action" popupId="CopiaDadosClientes"/>
+                </af:button>
+            </f:facet>
+            <f:facet name="toolbar"/>
+            <f:facet name="legend"/>
+            <f:facet name="info"/>
+            <af:separator id="s1"/>
+            <af:panelGridLayout id="pgl4">
+                <af:gridRow id="gr4">
+                    <af:gridCell id="gc16" halign="end">
+                        <af:outputLabel value="#{viewcontrollerBundle.ORIGEM_}" id="ol1"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc15">
+                        <af:selectOneRadio value="C" id="sor1" layout="horizontal"
+                                           valueChangeListener="#{backingBeanScope.backing_viewDBasicos.habilitaGerDir}"
+                                           autoSubmit="true">
+                            <af:selectItem label="Cliente" value="C" id="si1" disabled="false"/>
+                            <af:selectItem label="Prospect" value="P" id="si6" disabled="false"/>
+                        </af:selectOneRadio>
+                    </af:gridCell>
+                    <af:gridCell id="gc11">
+                        <af:spacer width="10" height="10" id="s3"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc18" width="auto" halign="end">
+                        <af:outputLabel value="#{viewcontrollerBundle.GER_U00EANCIA_DIRETORIA}" id="ol7"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc23"> 
+                    <af:selectOneChoice value="#{bindings.FndLookupGerDirVO1.inputValue}"
+                                            
+                                            required="#{bindings.FndLookupGerDirVO1.hints.mandatory}"
+                                            shortDesc="#{bindings.FndLookupGerDirVO1.hints.tooltip}" id="soc2"
+                                            disabled="true" partialTriggers="sor1">
+                            <f:selectItems value="#{bindings.FndLookupGerDirVO1.items}" id="si2"/>
+                            <f:validator binding="#{bindings.FndLookupGerDirVO1.validator}"/>
+                        </af:selectOneChoice>
+                        </af:gridCell>
+                </af:gridRow>
+                <af:gridRow marginTop="5px" height="auto" id="gr3">
+                    <af:gridCell id="gc17" halign="end">
+                        <af:outputLabel value="#{viewcontrollerBundle.PERFIL_}" id="ol2"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc14" marginStart="5px">
+                        <af:selectOneRadio value="1" label=" " id="sor2" layout="horizontal" autoSubmit="true"
+                                           valueChangeListener="#{backingBeanScope.backing_viewDBasicos.alteraCpfCnpjId}">
+                            <af:selectItem label="Pessoa Fisica" value="1" id="si7" disabled="false"/>
+                            <af:selectItem label="Pessoa Juridica" value="2" id="si8" disabled="false"/>
+                            <af:selectItem label="Estrangeiro" value="3" id="si9" disabled="false"/>
+                        </af:selectOneRadio>
+                    </af:gridCell>
+                    <af:gridCell id="gc25">
+                        <af:spacer width="10" height="10" id="s4"/>
+                    </af:gridCell>
+                    
+                    
+                    <af:gridCell id="gc12" width="auto" halign="end">
+                    <af:outputLabel partialTriggers="sor2" value="#{viewcontrollerBundle.FORMA_DE_TRATAMENTO}" id="ol8"/>
+                     
+                    </af:gridCell>
+                    <af:gridCell id="gc13">
+                       <af:selectOneChoice partialTriggers="sor2" value="#{bindings.FndFormaTratamentoVO1.inputValue}"
+                                            
+                                            required="#{bindings.FndFormaTratamentoVO1.hints.mandatory}"
+                                            shortDesc="#{bindings.FndFormaTratamentoVO1.hints.tooltip}" id="soc3"
+                                           >
+                            <f:selectItems value="#{bindings.FndFormaTratamentoVO1.items}" id="si4"/>
+                            <f:validator binding="#{bindings.FndFormaTratamentoVO1.validator}"/>
+                        </af:selectOneChoice>
+                    </af:gridCell>
+                    
+                </af:gridRow>
+            </af:panelGridLayout>
+            <af:panelGridLayout id="pgl1">
+                <af:gridRow marginTop="5px" height="auto" id="gr1">
+                    <af:gridCell marginStart="5px" id="gc1" halign="end" valign="middle">
+                        <af:outputLabel value="CPF:" id="ol3" partialTriggers="sor2"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" id="gc2" width="25%">
+                        <af:inputText id="it1"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                      columns="19" maximumLength="3" autoTab="true"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc5" marginStart="5px" halign="end" valign="middle">
+                        <af:outputLabel value="Grupo de Contas:" id="ol4" inlineStyle="font-family:sans-serif;"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc3" width="25px" marginStart="5px">
+                        <af:selectOneChoice value="#{bindings.Description.inputValue}"
+                                            required="#{bindings.Description.hints.mandatory}"
+                                            shortDesc="#{bindings.Description.hints.tooltip}" id="soc1"
+                                            contentStyle="background-color: white;border-style:solid;border-color:black;">
+                            <f:selectItems value="#{bindings.Description.items}" id="si3"/>
+                            <f:validator binding="#{bindings.Description.validator}"/>
+                        </af:selectOneChoice>
+                    </af:gridCell>
+                    <af:gridCell id="gc4" marginStart="5px" halign="end" valign="middle"/>
+                    <af:gridCell id="gc6" width="25%" marginStart="5px"/>
+                    <af:gridCell id="gc7" marginStart="5px" halign="end" valign="middle">
+                        <af:outputLabel value="Código Temporário:" id="ol5"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc8" width="25%" marginStart="5px">
+                        <af:inputText id="it2" columns="20"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow id="gr2" marginTop="5px">
+                    <af:gridCell id="gc9" marginStart="5px" halign="end" valign="middle">
+                        <af:outputLabel value="Nome:" id="ol6" partialTriggers="sor2"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc10" width="25px" marginStart="5px">
+                        <af:inputText id="it3" maximumLength="40"
+                                      inlineStyle="border-color:Black; vertical-align:super; " columns="100"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow id="gr5" marginTop="5px">
+                    <af:gridCell id="gc19" marginStart="5px" halign="end" valign="middle">
+                        <af:outputText value="Inscrição Estadual" id="ot4"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc20" width="25%" marginStart="5px">
+                        <af:inputText id="it4"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                      columns="19"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc21" marginStart="5px" halign="end" valign="middle">
+                        <af:outputText value="Inscrição Municipal:" id="ot5"/>
+                    </af:gridCell>
+                    <af:gridCell id="gc22" width="25px" marginStart="5px" marginEnd="5px">
+                        <af:inputText id="it5"
+                                      contentStyle="background-color: white;border-style:solid;border-color:black;"
+                                      columns="19"/>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:panelHeader>
+    </af:panelBox>
+</ui:composition>

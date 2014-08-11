@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FndLobsVO"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  RowClass="br.com.br.gatend.GestaoCliente.v1.model.vo.FndLobsVORowImpl"
+  ComponentClass="br.com.br.gatend.GestaoCliente.v1.model.vo.FndLobsVOImpl"
+  DefClass="br.com.br.gatend.GestaoCliente.v1.model.vo.FndLobsVODefImpl"
+  PageIterMode="Full">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Def|Coll|VarAccess"/>
+    <Attr Name="_isExpertMode" Value="true"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="br.com.br.gatend.GestaoCliente.v1.model.vo.FndLobsVO_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <Variable
+    Name="idArquivo"
+    Kind="viewcriteria"
+    Type="java.lang.String"/>
+  <SQLQuery><![CDATA[SELECT  
+ FILE_ID, 
+FILE_NAME, 
+FILE_CONTENT_TYPE, 
+FILE_DATA, 
+UPLOAD_DATE, 
+EXPIRATION_DATE, 
+PROGRAM_NAME, 
+PROGRAM_TAG, 
+LANGUAGE as LANGUAGE, 
+ORACLE_CHARSET, 
+FILE_FORMAT 
+FROM 
+FND_LOBS]]></SQLQuery>
+  <ViewAttribute
+    Name="FileId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    AliasName="FILE_ID"
+    Expression="FILE_ID"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="FileName"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="256"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="FILE_NAME"
+    Expression="FILE_NAME"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="256"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="FileContentType"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="256"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="FILE_CONTENT_TYPE"
+    Expression="FILE_CONTENT_TYPE"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="256"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="FileData"
+    IsUpdateable="false"
+    IsQueriable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.BlobDomain"
+    ColumnType="BLOB"
+    AliasName="FILE_DATA"
+    Expression="FILE_DATA"
+    SQLType="BLOB"/>
+  <ViewAttribute
+    Name="UploadDate"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    AliasName="UPLOAD_DATE"
+    Expression="UPLOAD_DATE"
+    SQLType="DATE"/>
+  <ViewAttribute
+    Name="ExpirationDate"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    AliasName="EXPIRATION_DATE"
+    Expression="EXPIRATION_DATE"
+    SQLType="DATE"/>
+  <ViewAttribute
+    Name="ProgramName"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="32"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="PROGRAM_NAME"
+    Expression="PROGRAM_NAME"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="32"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="ProgramTag"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="32"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="PROGRAM_TAG"
+    Expression="PROGRAM_TAG"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="32"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Language"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="4"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="LANGUAGE"
+    Expression="LANGUAGE"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="4"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="OracleCharset"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="30"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="ORACLE_CHARSET"
+    Expression="ORACLE_CHARSET"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="FileFormat"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="10"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="FILE_FORMAT"
+    Expression="FILE_FORMAT"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewCriteria
+    Name="FndLobsVOCriteriaById"
+    ViewObjectName="br.com.br.gatend.GestaoCliente.v1.model.vo.FndLobsVO"
+    Conjunction="AND">
+    <Properties>
+      <CustomProperties>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="FndLobsVOCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="FileId"
+        ViewAttribute="FileId"
+        Operator="="
+        Conjunction="AND"
+        Value=":idArquivo"
+        GenerateIsNullClauseForBindVars="false"
+        Required="Optional"
+        IsBindVarValue="true"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="FileId"/>
+  </AttrArray>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="br.com.br.gatend.GestaoCliente.v1.model.ModelBundle"/>
+  </ResourceBundle>
+</ViewObject>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.2.66.68" id="EditarPageDef"
+                Package="br.com.br.gatend.GestaoCliente.v1.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="taskflowComplemento1" taskFlowId="/WEB-INF/task-flow-Complemento.xml#task-flow-Complemento"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="taskflowDBasicosEditar1" taskFlowId="/WEB-INF/task-flow-DBasicosEditar.xml#task-flow-DBasicosEditar"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+  </executables>
+  <bindings>
+    <methodAction id="pesquisarAnexosPorCliente" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="pesquisarAnexosPorCliente" IsViewObjectMethod="false" DataControl="AnexoAMDataControl"
+                  InstanceName="data.AnexoAMDataControl.dataProvider">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+    <methodAction id="buscaDadosCliente" RequiresUpdateModel="true" Action="invokeMethod" MethodName="buscaDadosCliente"
+                  IsViewObjectMethod="false" DataControl="AnexoAMDataControl"
+                  InstanceName="data.AnexoAMDataControl.dataProvider">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>

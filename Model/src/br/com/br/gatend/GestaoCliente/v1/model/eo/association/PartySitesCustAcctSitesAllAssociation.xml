@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PartySitesCustAcctSitesAllAssociation"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="HzPartySites"
+    Cardinality="1"
+    Source="true"
+    Owner="br.com.br.gatend.GestaoCliente.v1.model.eo.HzPartySites"
+    LockLevel="NONE">
+    <DesignTime>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="HzPartySites"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="br.com.br.gatend.GestaoCliente.v1.model.eo.HzPartySites.PartySiteId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="HzCustAcctSitesAll"
+    Cardinality="1"
+    Owner="br.com.br.gatend.GestaoCliente.v1.model.eo.HzCustAcctSitesAll">
+    <DesignTime>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="HzCustAcctSitesAll"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="br.com.br.gatend.GestaoCliente.v1.model.eo.HzCustAcctSitesAll.PartySiteId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

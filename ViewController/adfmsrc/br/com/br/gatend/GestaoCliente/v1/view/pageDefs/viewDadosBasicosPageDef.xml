@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.2.66.68" id="viewDadosBasicosPageDef"
+                Package="br.com.br.gatend.GestaoCliente.v1.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="FndLookupValue1" RangeSize="25" DataControl="ClientesAMDataControl" id="FndLookupValue1Iterator"/>
+    <iterator Binds="U536_TipoProspect1" RangeSize="25" DataControl="ProspectsAMDataControl"
+              id="U536_TipoProspect1Iterator"/>
+  </executables>
+  <bindings>
+    <list IterBinding="FndLookupValue1Iterator" StaticList="false" Uses="LOV_Description" id="Description"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="U536_TipoProspect1Iterator" StaticList="false" Uses="LOV_Description" id="Description1"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="FndLookupValue1Iterator" id="LookupCode">
+      <AttrNames>
+        <Item Value="LookupCode"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

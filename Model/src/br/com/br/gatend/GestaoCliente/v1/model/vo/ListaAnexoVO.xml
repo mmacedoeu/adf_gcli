@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+
+<ViewObject
+   xmlns="http://xmlns.oracle.com/bc4j"
+   Name="ListaAnexoVO"
+   Version="12.1.3.10.8"
+   InheritPersonalization="merge"
+   BindingStyle="OracleName"
+   CustomQuery="true"
+   RowClass="br.com.br.gatend.GestaoCliente.v1.model.vo.ListaAnexoVORowImpl"
+   ComponentClass="br.com.br.gatend.GestaoCliente.v1.model.vo.ListaAnexoVOImpl"
+   DefClass="br.com.br.gatend.GestaoCliente.v1.model.vo.ListaAnexoVODefImpl"
+   PageIterMode="Partial" >
+   <DesignTime>
+      <Attr Name="_codeGenFlag2" Value="Def|Coll|Prog" />
+      <Attr Name="_isExpertMode" Value="true" />
+      <Attr Name="_isCodegen" Value="true" />
+   </DesignTime>
+   <Properties >
+      <SchemaBasedProperties >
+         <LABEL
+            ResId="br.com.br.gatend.GestaoCliente.v1.model.vo.ListaAnexoVO_LABEL" >
+         </LABEL>
+      </SchemaBasedProperties>
+   </Properties>
+   <ViewAttribute
+      Name="Sequencial"
+      IsPersistent="false"
+      PrecisionRule="true"
+      Type="java.lang.String"
+      ColumnType="$none$"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_description" Value="Sequencial" />
+      </DesignTime>
+      <Properties >
+         <SchemaBasedProperties >
+            <LABEL
+               ResId="br.com.br.gatend.GestaoCliente.v1.model.vo.ListaAnexoVO.Sequencial_LABEL" >
+            </LABEL>
+            <TOOLTIP
+               ResId="br.com.br.gatend.GestaoCliente.v1.model.vo.ListaAnexoVO.Sequencial_TOOLTIP" >
+            </TOOLTIP>
+         </SchemaBasedProperties>
+      </Properties>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Categoria"
+      IsSelected="false"
+      IsPersistent="false"
+      PrecisionRule="true"
+      Precision="255"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_description" Value="Categoria" />
+      </DesignTime>
+      <Properties >
+         <SchemaBasedProperties >
+            <LABEL
+               ResId="br.com.br.gatend.GestaoCliente.v1.model.vo.ListaAnexoVO.Categoria_LABEL" >
+            </LABEL>
+            <TOOLTIP
+               ResId="br.com.br.gatend.GestaoCliente.v1.model.vo.ListaAnexoVO.Categoria_TOOLTIP" >
+            </TOOLTIP>
+         </SchemaBasedProperties>
+      </Properties>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Descricao"
+      IsSelected="false"
+      IsPersistent="false"
+      PrecisionRule="true"
+      Precision="255"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_description" Value="Descricao" />
+      </DesignTime>
+      <Properties >
+         <SchemaBasedProperties >
+            <LABEL
+               ResId="br.com.br.gatend.GestaoCliente.v1.model.vo.ListaAnexoVO.Descricao_LABEL" >
+            </LABEL>
+            <TOOLTIP
+               ResId="br.com.br.gatend.GestaoCliente.v1.model.vo.ListaAnexoVO.Descricao_TOOLTIP" >
+            </TOOLTIP>
+         </SchemaBasedProperties>
+      </Properties>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NomeArquivo"
+      IsSelected="false"
+      IsPersistent="false"
+      PrecisionRule="true"
+      Precision="255"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_description" Value="Nome Arquivo" />
+      </DesignTime>
+      <Properties >
+         <SchemaBasedProperties >
+            <LABEL
+               ResId="br.com.br.gatend.GestaoCliente.v1.model.vo.ListaAnexoVO.NomeArquivo_LABEL" >
+            </LABEL>
+            <TOOLTIP
+               ResId="br.com.br.gatend.GestaoCliente.v1.model.vo.ListaAnexoVO.NomeArquivo_TOOLTIP" >
+            </TOOLTIP>
+         </SchemaBasedProperties>
+      </Properties>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Arquivo"
+      IsSelected="false"
+      IsPersistent="false"
+      PrecisionRule="true"
+      Type="oracle.jbo.domain.BlobDomain"
+      ColumnType="BLOB"
+      AliasName="ARQUIVO"
+      SQLType="BLOB" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="MediaId"
+      IsSelected="false"
+      IsPersistent="false"
+      PrecisionRule="true"
+      Precision="255"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="MEDIAID"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IndExcluir"
+      IsSelected="false"
+      IsPersistent="false"
+      PrecisionRule="true"
+      Type="java.lang.String"
+      ColumnType="NUMBER"
+      AliasName="INDEXCLUIR"
+      SQLType="BIT" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="IndIncluir"
+      IsSelected="false"
+      IsPersistent="false"
+      PrecisionRule="true"
+      Type="java.lang.String"
+      ColumnType="NUMBER"
+      AliasName="INDINCLUIR"
+      SQLType="BIT"/>
+   <AttrArray Name="KeyAttributes">
+      <Item Value="Sequencial" />
+   </AttrArray>
+   <ResourceBundle >
+      <PropertiesBundle
+         PropertiesFile="br.com.br.gatend.GestaoCliente.v1.model.ModelBundle" >
+      </PropertiesBundle>
+   </ResourceBundle>
+</ViewObject>

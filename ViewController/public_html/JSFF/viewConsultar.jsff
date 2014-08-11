@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html">
+    <c:set var="br_com_br_gatend_gestor_clientes_viewcontrollerBundle"
+           value="#{adfBundle['br.com.br.gatend.GestaoCliente.v1.view.ViewControllerBundle']}"/>
+    <af:panelGroupLayout layout="vertical" id="pgl1" binding="#{backingBeanScope.backing_viewConsultaClientes.pgl1}">
+        <af:panelSplitter id="ps1" binding="#{backingBeanScope.backing_viewConsultaClientes.ps1}"
+                          orientation="vertical" splitterPosition="202" dimensionsFrom="children">
+            <f:facet name="first">
+                <af:panelGroupLayout id="pgl2" binding="#{backingBeanScope.backing_viewConsultaClientes.pgl2}">
+                    <af:panelHeader text="Consultar Clientes" id="ph2"
+                                    binding="#{backingBeanScope.backing_viewConsultaClientes.ph2}">
+                        <!--af:query id="qryId1" headerText="Search" disclosed="true"
+                                  value="#{bindings.ConsultaClientesVOCriteriaQuery1.queryDescriptor}"
+                                  model="#{bindings.ConsultaClientesVOCriteriaQuery1.queryModel}"
+                                  queryListener="#{bindings.ConsultaClientesVOCriteriaQuery1.processQuery}"
+                                  queryOperationListener="#{bindings.ConsultaClientesVOCriteriaQuery1.processQueryOperation}"
+                                  
+                                  binding="#{backingBeanScope.backing_viewConsultaClientes.qryId1}"
+                                  saveQueryMode="hidden" searchButtonText="Localizar" resetButtonText="Limpar"
+                                  inlineStyle="border-left-style:none; border-right-style:none; border-top-style:none; border-bottom-style:none;"
+                                  conjunctionReadOnly="true"/-->
+                        <!-- <af:query id="qryId1" headerText="Search" disclosed="true"
+                                  value="#{bindings.ConsultaClientesVOCriteriaQuery1.queryDescriptor}"
+                                  model="#{bindings.ConsultaClientesVOCriteriaQuery1.queryModel}"
+                                  queryListener="#{bindings.ConsultaClientesVOCriteriaQuery1.processQuery}"
+                                  queryOperationListener="#{bindings.ConsultaClientesVOCriteriaQuery1.processQueryOperation}"
+                                  resultComponentId="::pc1:resId1"
+                                  binding="#{backingBeanScope.backing_viewConsultaClientes.qryId1}"
+                                  saveQueryMode="hidden" searchButtonText="Localizar" resetButtonText="Limpar"
+                                  inlineStyle="border-left-style:none; border-right-style:none; border-top-style:none; border-bottom-style:none;"
+                                  conjunctionReadOnly="true"/> -->
+                        <af:button text="Avançado" id="btAdvanced"
+                                   binding="#{backingBeanScope.backing_viewConsultaClientes.btAdvanced}"
+                                   inlineStyle="float: right; margin-right: 10px; margin-top: -5px;"
+                                   textAndAccessKey="Avançado" accessKey="d"
+                                   actionListener="#{backingBeanScope.backing_viewConsultaClientes.modAdvanced}"/>
+                        <af:button text="Básico" id="btBasic"
+                                   binding="#{backingBeanScope.backing_viewConsultaClientes.btBasic}"
+                                   inlineStyle="float: right; margin-right: 10px; margin-top: -5px;"
+                                   textAndAccessKey="Básico" accessKey="b" visible="false"
+                                   actionListener="#{backingBeanScope.backing_viewConsultaClientes.modBasic}"/>
+                        <af:showDetailHeader text="Search" disclosed="true" id="sdh1"
+                                             binding="#{backingBeanScope.backing_viewConsultaClientes.sdh1}"
+                                             inlineStyle="margin-top:10px; border-left-style:none; border-right-style:none; border-top-style:none; border-bottom-style:none; margin-bottom:60px; position:static;">
+                            <f:facet name="context"/>
+                            <f:facet name="menuBar"/>
+                            <f:facet name="toolbar"/>
+                            <f:facet name="legend"/>
+                            <f:facet name="info"/>
+                            <af:panelGridLayout id="pn1" binding="#{backingBeanScope.backing_viewConsultaClientes.pn1}"
+                                                dimensionsFrom="auto">
+                                <af:gridRow marginTop="5px" height="auto" id="gr1"
+                                            binding="#{backingBeanScope.backing_viewConsultaClientes.gr1}">
+                                    <af:gridCell marginStart="5px" id="gc1"
+                                                 binding="#{backingBeanScope.backing_viewConsultaClientes.gc1}"
+                                                 halign="end" valign="middle">
+                                        <h:outputLabel value="Correspondência" id="ol1"
+                                                       binding="#{backingBeanScope.backing_viewConsultaClientes.ol1}"/>
+                                    </af:gridCell>
+                                    <af:gridCell marginStart="5px" width="auto" id="gc2" columnSpan="2"
+                                                 binding="#{backingBeanScope.backing_viewConsultaClientes.gc2}">
+                                        <af:selectOneRadio unselectedLabel="Todos" disabled="true" layout="horizontal">
+                                            <f:selectItem itemLabel="Qualquer um" itemValue="2"/>
+                                        </af:selectOneRadio>
+                                    </af:gridCell>
+                                </af:gridRow>
+                                <af:gridRow id="gr2" binding="#{backingBeanScope.backing_viewConsultaClientes.gr2}">
+                                    <af:gridCell id="gc4" marginStart="5px" valign="middle" halign="end"
+                                                 binding="#{backingBeanScope.backing_viewConsultaClientes.gc4}">
+                                        <h:outputLabel value="Perfil" id="ol2"
+                                                       binding="#{backingBeanScope.backing_viewConsultaClientes.ol2}"/>
+                                    </af:gridCell>
+                                    <af:gridCell id="gc5" width="auto" 
+                                                 binding="#{backingBeanScope.backing_viewConsultaClientes.gc5}">
+                                        <af:selectOneChoice unselectedLabel="igual a" id="soc1" contentStyle="width: 87.0px;"
+                                                            binding="#{backingBeanScope.backing_viewConsultaClientes.soc1}">
+                                        </af:selectOneChoice>
+                                    </af:gridCell>
+                                    <af:gridCell width="auto" id="gc3" halign="start"
+                                                 binding="#{backingBeanScope.backing_viewConsultaClientes.gc3}">
+                                        <af:selectOneChoice value="#{bindings.FndLookUpValuesVLU707GcPerfilClienteVVO1.inputValue}"
+                                                            required="#{bindings.FndLookUpValuesVLU707GcPerfilClienteVVO1.hints.mandatory}"
+                                                            shortDesc="#{bindings.FndLookUpValuesVLU707GcPerfilClienteVVO1.hints.tooltip}"
+                                                            id="soc2" binding="#{backingBeanScope.backing_viewConsultaClientes.soc2}">
+                                            <f:selectItems value="#{bindings.FndLookUpValuesVLU707GcPerfilClienteVVO1.items}"
+                                                           id="si1"  binding="#{backingBeanScope.backing_viewConsultaClientes.si1}"/>
+                                               <f:validator binding="#{bindings.FndLookUpValuesVLU707GcPerfilClienteVVO1.validator}"/>
+                                        </af:selectOneChoice>
+                                    </af:gridCell>
+                                </af:gridRow>
+                                <af:gridRow id="gr3" binding="#{backingBeanScope.backing_viewConsultaClientes.gr3}">
+                                    <af:gridCell id="gc6" valign="middle"
+                                                 binding="#{backingBeanScope.backing_viewConsultaClientes.gc6}"
+                                                 halign="end">
+                                        <h:outputLabel value="CNPJ / CPF / EST" id="ol3"
+                                                       binding="#{backingBeanScope.backing_viewConsultaClientes.ol3}"/>
+                                    </af:gridCell>
+                                    <af:gridCell id="gc7"
+                                                 binding="#{backingBeanScope.backing_viewConsultaClientes.gc7}">
+                                        <af:selectOneChoice unselectedLabel="igual a" id="soc3" contentStyle="width: 87.0px;"
+                                                            binding="#{backingBeanScope.backing_viewConsultaClientes.soc3}">
+                                            <f:selectItem itemLabel="Começa com" itemValue="1"/>
+                                            <f:selectItem itemLabel="Termina com" itemValue="2"/>
+                                        </af:selectOneChoice>
+                                    </af:gridCell>
+                                    <af:gridCell id="gc8"
+                                                 binding="#{backingBeanScope.backing_viewConsultaClientes.gc8}">
+                                        <af:inputText id="itCnpjCpf" columns="20" maximumLength="14"
+                                                      binding="#{backingBeanScope.backing_viewConsultaClientes.itCnpjCpf}"/>
+                                    </af:gridCell>
+                                </af:gridRow>
+                                <af:gridRow id="gr4" binding="#{backingBeanScope.backing_viewConsultaClientes.gr4}">
+                                    <af:gridCell id="gc9" valign="middle"
+                                                 binding="#{backingBeanScope.backing_viewConsultaClientes.gc9}"
+                                                 halign="end">
+                                        <h:outputLabel value="Razão Social / Nome" id="ol4"
+                                                       binding="#{backingBeanScope.backing_viewConsultaClientes.ol4}"/>
+                                    </af:gridCell>
+                                    <af:gridCell id="gc10"
+                                                 binding="#{backingBeanScope.backing_viewConsultaClientes.gc10}">
+                                        <af:selectOneChoice unselectedLabel="igual a" id="soc4" contentStyle="width: 87.0px;"
+                                                            binding="#{backingBeanScope.backing_viewConsultaClientes.soc4}">
+                                            <f:selectItem itemLabel="Começa com" itemValue="1"/>
+                                            <f:selectItem itemLabel="Termina com" itemValue="2"/>
+                                        </af:selectOneChoice>
+                                    </af:gridCell>
+                                    <af:gridCell id="gc11"
+                                                 binding="#{backingBeanScope.backing_viewConsultaClientes.gc11}">
+                                        <af:inputText id="itRazaoSocialNome" columns="40" maximumLength="240"
+                                                      binding="#{backingBeanScope.backing_viewConsultaClientes.itRazaoSocialNome}"/>
+                                    </af:gridCell>
+                                </af:gridRow>
+                                <af:gridRow id="gr5" binding="#{backingBeanScope.backing_viewConsultaClientes.gr5}">
+                                    <af:gridCell id="gc12" valign="middle"
+                                                 binding="#{backingBeanScope.backing_viewConsultaClientes.gc12}"
+                                                 halign="end">
+                                        <h:outputLabel value="Cód. Cliente R3" id="ol5"
+                                                       binding="#{backingBeanScope.backing_viewConsultaClientes.ol5}"/>
+                                    </af:gridCell>
+                                    <af:gridCell id="gc13"
+                                                 binding="#{backingBeanScope.backing_viewConsultaClientes.gc13}">
+                                        <af:selectOneChoice unselectedLabel="igual a" id="soc5" contentStyle="width: 87.0px;"
+                                                            binding="#{backingBeanScope.backing_viewConsultaClientes.soc5}">
+                                            <f:selectItem itemLabel="Começa com" itemValue="1"/>
+                                            <f:selectItem itemLabel="Termina com" itemValue="2"/>
+                                        </af:selectOneChoice>
+                                    </af:gridCell>
+                                    <af:gridCell id="gc14"
+                                                 binding="#{backingBeanScope.backing_viewConsultaClientes.gc14}"
+                                                 width="auto">
+                                        <af:inputText id="itCodR3" columns="30" maximumLength="30" 
+                                                      binding="#{backingBeanScope.backing_viewConsultaClientes.itCodR3}"/>  
+                                    </af:gridCell>
+                                </af:gridRow>
+                                <af:gridRow id="gr6" binding="#{backingBeanScope.backing_viewConsultaClientes.gr6}"/>
+                            </af:panelGridLayout>
+                            <af:popup id="popupConfirm" binding="#{backingBeanScope.backing_viewConsultaClientes.popupConfirm}"
+                                      contentDelivery="lazy">
+                                <af:dialog id="dlgConfirm" type="yesNo" title="Confirma" dialogListener="#{backingBeanScope.backing_viewConsultaClientes.redirectPopupValidaCpfCnpj}"
+                                           closeIconVisible="false">
+                                    <af:outputText value="CNPJ/CPF/EST  não encontrado. Deseja cadastrar novo cliente?" id="ot2"/>
+                                </af:dialog>
+                            </af:popup>                                            
+                            <af:commandToolbarButton text="Adicionar Campos" id="ctbAddFields"
+                                                     binding="#{backingBeanScope.backing_viewConsultaClientes.ctbAddFields}"
+                                                     actionDelivery="none" visible="false"
+                                                     inlineStyle="float: right; margin-right: 10px; margin-top: -5px;">
+                                <f:facet name="popup">
+                                    <af:menu id="m1">
+                                        <af:commandMenuItem text="Bairro" id="cmiBairro" 
+                                                            binding="#{backingBeanScope.backing_viewConsultaClientes.cmiBairro}"
+                                                            actionListener="#{backingBeanScope.backing_viewConsultaClientes.addFields}"/>
+                                        <af:commandMenuItem text="Cidade" id="cmiCidade"
+                                                            actionListener="#{backingBeanScope.backing_viewConsultaClientes.addFields}"/>
+                                        <af:commandMenuItem text="Endereço" id="cmiEndereco"
+                                                            actionListener="#{backingBeanScope.backing_viewConsultaClientes.addFields}"/>
+                                        <af:commandMenuItem text="Estado" id="cmiEstado"
+                                                            actionListener="#{backingBeanScope.backing_viewConsultaClientes.addFields}"/>
+                                        <af:commandMenuItem text="Origem" id="cmiOrigem"
+                                                            actionListener="#{backingBeanScope.backing_viewConsultaClientes.addFields}"/>
+                                        <af:commandMenuItem text="Principal" id="cmiPrincipal"
+                                                            actionListener="#{backingBeanScope.backing_viewConsultaClientes.addFields}"/>
+                                    </af:menu>
+                                </f:facet>
+                            </af:commandToolbarButton>
+                            <af:button text="Limpar" id="b3"
+                                       inlineStyle="float: right; margin-bottom: 60px; margin-right: 10px; margin-top: -5px;"
+                                       actionListener="#{backingBeanScope.backing_viewConsultaClientes.clearFields}"/>
+                            <af:button text="Localizar" id="b4"
+                                       inlineStyle="float: right; margin-right: 10px; margin-top: -5px;"
+                                       actionListener="#{backingBeanScope.backing_viewConsultaClientes.localizarClientes}"
+                                       immediate="true"/>
+                        </af:showDetailHeader>
+                    </af:panelHeader>
+                </af:panelGroupLayout>
+            </f:facet>  
+            <f:facet name="second">
+                <af:panelCollection id="pc1" binding="#{backingBeanScope.backing_viewConsultaClientes.pc1}"
+                                    inlineStyle="width:inherit;" defaultToolbarItemDisplay="icon"
+                                    featuresOff="viewMenu">
+                    <f:facet name="menus"/>
+                    <f:facet name="toolbar">
+                        <af:toolbar id="t1" binding="#{backingBeanScope.backing_viewConsultaClientes.t1}">
+                            <af:button text="#{br_com_br_gatend_gestor_clientes_viewcontrollerBundle.EXPORTAR_PARA_EXCEL}"
+                                       id="b1" binding="#{backingBeanScope.backing_viewConsultaClientes.b1}"
+                                       disabled="#{backingBeanScope.backing_viewConsultaClientes.disabButtonLoc}">
+                                <af:fileDownloadActionListener contentType="application/vnd.ms-excel"
+                                                               method="#{backingBeanScope.backing_viewConsultaClientes.getXLS}"
+                                                               filename="#{backingBeanScope.backing_viewConsultaClientes.nomeRelatorioAcompanhamento}"/>
+                            </af:button>
+                            <af:button text="#{br_com_br_gatend_gestor_clientes_viewcontrollerBundle.EDITAR}" id="b2"
+                                       binding="#{backingBeanScope.backing_viewConsultaClientes.b2}"
+                                       action="#{applicationScope.editarBacking.editarCliente}"/>
+                        </af:toolbar>
+                    </f:facet>
+                    <f:facet name="statusbar"/>
+                    <af:table value="#{bindings.ConsultaClientesVO1.collectionModel}" var="row"
+                              rows="#{bindings.ConsultaClientesVO1.rangeSize}"
+                              emptyText="#{bindings.ConsultaClientesVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              rowBandingInterval="0" fetchSize="-1" id="t2"
+                              filterModel="#{bindings.ConsultaClientesVOCriteriaQuery1.queryDescriptor}"
+                              queryListener="#{bindings.ConsultaClientesVOCriteriaQuery1.processQuery}"
+                              filterVisible="true"
+                              scrollPolicy="page"
+                              varStatus="vs"
+                              rowSelection="single"
+                              selectionListener="#{bindings.ConsultaClientesVO1.collectionModel.makeCurrent}">
+                        <af:column sortProperty="#{bindings.ConsultaClientesVO1.hints.RazaoSocial.name}"
+                                   filterable="true" headerText="Razão Social /Nome" id="c11">
+                            <af:outputText value="#{row.RazaoSocial}"
+                                           shortDesc="#{bindings.ConsultaClientesVO1.hints.RazaoSocial.tooltip}"
+                                           id="ot11"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.ConsultaClientesVO1.hints.TipoCliente.name}"
+                                   headerText="CNPJ/CPF/EST" id="c12">
+                            <af:outputText value="#{row.TipoCliente}"
+                                           shortDesc="#{bindings.ConsultaClientesVO1.hints.TipoCliente.tooltip}"
+                                           id="ot12"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.ConsultaClientesVO1.hints.CodigoR3.name}" filterable="true"
+                                   headerText="Cód.Cliente R3" id="c13">
+                            <af:outputText value="#{row.CodigoR3}"
+                                           shortDesc="#{bindings.ConsultaClientesVO1.hints.CodigoR3.tooltip}"
+                                           id="ot13"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.ConsultaClientesVO1.hints.Logradouro.name}"
+                                   headerText="Logradouro" id="c14">
+                            <af:outputText value="#{row.Logradouro}"
+                                           shortDesc="#{bindings.ConsultaClientesVO1.hints.Logradouro.tooltip}"
+                                           id="ot14"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.ConsultaClientesVO1.hints.Bairro.name}" 
+                                   headerText="Bairro" id="c15">
+                            <af:outputText value="#{row.Bairro}"
+                                           shortDesc="#{bindings.ConsultaClientesVO1.hints.Bairro.tooltip}" id="ot15"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.ConsultaClientesVO1.hints.Cidade.name}" 
+                                   headerText="Cidade" id="c16">
+                            <af:outputText value="#{row.Cidade}"
+                                           shortDesc="#{bindings.ConsultaClientesVO1.hints.Cidade.tooltip}" id="ot16"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.ConsultaClientesVO1.hints.Estado.name}" 
+                                   headerText="Estado" id="c17">
+                            <af:outputText value="#{row.Estado}"
+                                           shortDesc="#{bindings.ConsultaClientesVO1.hints.Estado.tooltip}" id="ot17"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.ConsultaClientesVO1.hints.Origem.name}" 
+                                   headerText="Origem" id="c18">
+                            <af:outputText value="#{row.Origem}"
+                                           shortDesc="#{bindings.ConsultaClientesVO1.hints.Origem.tooltip}" id="ot18"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.ConsultaClientesVO1.hints.Perfil.name}" 
+                                   headerText="Perfil" id="c19">
+                            <af:outputText value="#{row.Perfil}"
+                                           shortDesc="#{bindings.ConsultaClientesVO1.hints.Perfil.tooltip}" id="ot19"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.ConsultaClientesVO1.hints.Principal.name}" 
+                                   headerText="Principal" id="c20">
+                            <af:outputText value="#{row.Principal}"
+                                           shortDesc="#{bindings.ConsultaClientesVO1.hints.Principal.tooltip}"
+                                           id="ot20"/>
+                        </af:column>
+                    </af:table>
+                </af:panelCollection>
+            </f:facet>
+        </af:panelSplitter>
+    </af:panelGroupLayout>
+   
+</ui:composition>

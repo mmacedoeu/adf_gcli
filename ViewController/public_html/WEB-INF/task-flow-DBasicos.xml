@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="task-flow-DBasicos">
+    <default-activity>viewDBasicos</default-activity>
+    <managed-bean id="__1">
+      <managed-bean-name>backing_viewDBasicos</managed-bean-name>
+      <managed-bean-class>br.com.br.gatend.GestaoCliente.v1.view.backing.ViewDBasicos</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+      <!--oracle-jdev-comment:managed-bean-jsp-link:1JSFF/viewDBasicos.jsff-->
+    </managed-bean>
+    <managed-bean id="__2">
+      <managed-bean-name>diretoriaGerencia</managed-bean-name>
+      <managed-bean-class>br.com.br.gatend.GestaoCliente.v1.view.backing.ViewDBasicos</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+    </managed-bean>
+    <view id="viewDBasicos">
+      <page>/JSFF/viewDBasicos.jsff</page>
+    </view>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

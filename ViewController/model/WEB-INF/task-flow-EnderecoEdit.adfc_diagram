@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">viewEnderecoEdit</property>
+      <property
+         name="page">/JSFF/viewEnderecoEdit.jsff</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>viewEnderecoEdit&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">98.94824</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">120.0</property>
+   </View>
+</SDM>

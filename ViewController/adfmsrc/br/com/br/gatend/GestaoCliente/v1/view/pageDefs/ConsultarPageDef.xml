@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.2.66.68" id="ConsultarPageDef"
+                Package="br.com.br.gatend.GestaoCliente.v1.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="taskflowendereco1" taskFlowId="/WEB-INF/task-flow-endereco.xml#task-flow-endereco"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="taskflowconsultar1" taskFlowId="/WEB-INF/task-flow-consultar.xml#task-flow-consultar"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+  </executables>
+  <bindings>
+    <methodAction id="validaPrivilegioAcessoClientes" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="validaPrivilegioAcessoClientes" IsViewObjectMethod="false"
+                  DataControl="ClientesAMDataControl" InstanceName="data.ClientesAMDataControl.dataProvider"
+                  ReturnName="data.ClientesAMDataControl.methodResults.validaPrivilegioAcessoClientes_ClientesAMDataControl_dataProvider_validaPrivilegioAcessoClientes_result">
+      <NamedData NDName="parametros" NDType="java.util.Map"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>

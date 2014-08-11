@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="task-flow-consultar">
+    <default-activity>Consultar</default-activity>
+    <managed-bean id="__1">
+      <managed-bean-name>backing_viewConsultaClientes</managed-bean-name>
+      <managed-bean-class>br.com.br.gatend.GestaoCliente.v1.view.backing.ViewConsultaClientes</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+    </managed-bean>
+    <view id="Consultar">
+      <page>/JSFF/viewConsultar.jsff</page>
+    </view>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <af:panelGroupLayout id="pgl1" binding="#{backingBeanScope.backing_viewTrbutarioEdit.pgl1}"
+                         inlineStyle="width:899px;" layout="horizontal">
+        <af:panelGroupLayout id="pgl2" binding="#{backingBeanScope.backing_viewTrbutarioEdit.pgl2}">
+            <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_viewTrbutarioEdit.pfl1}">
+                <af:inputText label="Procedimento de Cobrança:" id="it1" binding="#{backingBeanScope.backing_viewTrbutarioEdit.it1}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Conta de Reconciliação:" id="it2" binding="#{backingBeanScope.backing_viewTrbutarioEdit.it2}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Código de Juros:" id="it3" binding="#{backingBeanScope.backing_viewTrbutarioEdit.it3}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Segmento Financeiro:" id="it4" binding="#{backingBeanScope.backing_viewTrbutarioEdit.it4}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Conta Crédito:" id="it5" binding="#{backingBeanScope.backing_viewTrbutarioEdit.it5}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Tipo Financeiro:" id="it6" binding="#{backingBeanScope.backing_viewTrbutarioEdit.it6}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Indicador de Garantia:" id="it7" binding="#{backingBeanScope.backing_viewTrbutarioEdit.it7}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Natureza Jurídica:" id="it9" binding="#{backingBeanScope.backing_viewTrbutarioEdit.it9}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <af:inputText label="Governo/Cooperativa:" id="it8" binding="#{backingBeanScope.backing_viewTrbutarioEdit.it8}"
+                              contentStyle="background-color: white;border-style:solid;border-color:black;"/>
+                <f:facet name="footer"/>
+            </af:panelFormLayout>
+        </af:panelGroupLayout>
+    </af:panelGroupLayout>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_viewTrbutarioEdit-->
+</ui:composition>

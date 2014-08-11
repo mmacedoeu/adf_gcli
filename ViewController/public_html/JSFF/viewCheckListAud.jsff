@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:f="http://java.sun.com/jsf/core">
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_viewCheckListAud-->
+    <af:panelGroupLayout id="pgl3" binding="#{backingBeanScope.backing_viewCheckListAud.pgl3}">
+        <c:set var="viewcontrollerBundle"
+               value="#{adfBundle['br.com.br.gatend.GestaoCliente.v1.view.ViewControllerBundle']}"/>
+    <af:resource type="javascript">
+        function cancelaPopup(actionEvent) {
+            var action = actionEvent.getSource();
+            AdfCustomEvent.queue(action, 'cancelaPopup', null, false);
+        }
+    </af:resource> 
+               
+               
+        <af:showDetailHeader text="#{viewcontrollerBundle.CHECKLIST_AUDITORIA}" disclosed="false" id="sdh1"
+                             binding="#{backingBeanScope.backing_viewCheckListAud.sdh1}">
+            <f:facet name="context"/>
+            <f:facet name="menuBar"/>
+            <f:facet name="toolbar"/>
+            <f:facet name="legend"/>
+            <f:facet name="info"/>
+        </af:showDetailHeader>
+        <af:panelCollection id="pc2" binding="#{backingBeanScope.backing_viewCheckListAud.pc2}">
+            <f:facet name="menus" />
+            <f:facet name="toolbar">
+                <af:toolbar id="t2" binding="#{backingBeanScope.backing_viewCheckListAud.t2}">
+                    <af:button text="#{viewcontrollerBundle.ADICIONAR_ITEM}" id="b3"
+                        action="#{viewChecklistAud.adicionarItem}"
+                        binding="#{backingBeanScope.backing_viewCheckListAud.b3}" />
+                    <af:button text="#{viewcontrollerBundle.EXCLUIR_ITEM}" id="b4"
+                        action="#{viewChecklistAud.excluirItem}"
+                        partialSubmit="false"
+                        binding="#{backingBeanScope.backing_viewCheckListAud.b4}"/>
+                </af:toolbar>           
+            </f:facet>
+            
+            <f:facet name="statusbar">
+                <af:toolbar id="t4" binding="#{backingBeanScope.backing_viewCheckListAud.t4}">
+                    <af:button text="#{viewcontrollerBundle.SALVAR}" id="b5" action="#{viewChecklistAud.salvarItens}"
+                               binding="#{backingBeanScope.backing_viewCheckListAud.b5}"/>
+                    <af:button text="#{viewcontrollerBundle.CANCELAR}" id="b2"
+                               binding="#{backingBeanScope.backing_viewCheckListAud.b2}">
+                        <af:clientListener method="cancelaPopup" type="click"/>
+                        <af:serverListener type="cancelaPopup" method="#{backingBeanScope.backing_viewCheckListAud.cancelarPopup}"/>
+                    </af:button>           
+                </af:toolbar>
+            </f:facet>
+ 
+           <af:table value="#{bindings.ListaChecklistVO1.collectionModel}" editingMode="editAll" var="row" 
+                     id="t1" 
+                     inlineStyle="background-color:HighlightText;" 
+                     varStatus="index"
+                     selectedRowKeys="#{bindings.ListaChecklistVO1.collectionModel.selectedRow}"
+                     selectionListener="#{bindings.ListaChecklistVO1.collectionModel.makeCurrent}"
+                     partialTriggers="::b3 ::b4" rows="#{bindings.ListaChecklistVO1.rangeSize}"
+                     binding="#{viewChecklistAud.t1}"
+                     emptyText="#{bindings.ListaChecklistVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                     rowBandingInterval="0" fetchSize="#{bindings.ListaChecklistVO1.rangeSize}">
+               <af:column id="c5" width="22">
+<!--
+                    <af:selectBooleanCheckbox id="sbc1" value="#{row.bindings.Checked.inputValue}"/>
+-->                    
+                    <af:selectBooleanCheckbox id="sbc1" value="#{row.Checked}"/>
+                </af:column>
+                <af:column headerText="#{viewcontrollerBundle.ITENS_VERIFICADOS}" id="coluna">
+                    <af:selectOneChoice value="#{row.Meaning}"
+                                        label="#{bindings.U536_CheckList1.label}"
+                                        id="soc1">
+                                       <af:forEach items="#{bindings.U536_CheckList1.rangeSet}" var="list">
+                                        <af:selectItem id="sitem1"
+                                                       value="#{list.LoockupCode}" label="#{list.Description}"/>
+                                        </af:forEach>               
+                    </af:selectOneChoice>
+                </af:column>
+               <af:column sortable="false" headerText="#{viewcontrollerBundle.JUSTIFICATIVA}" id="c2" width="208">
+                    <af:selectManyChoice value="#{viewChecklistAud.selectedJustificativa}"
+                                         valueChangeListener="#{viewChecklistAud.onJustificativaChange}"
+                                         label="#{bindings.U707GcJustChecklistVVO1.label}" id="smc1">
+                        <f:selectItems value="#{bindings.U707GcJustChecklistVVO1.items}" id="si2"/>
+                        <f:validator binding="#{bindings.U707GcJustChecklistVVO1.validator}"/>
+                    </af:selectManyChoice>
+                </af:column>
+                <af:column headerText="#{bindings.ListaChecklistVO1.hints.LastUpdateBy.label}" id="c10">
+                    <af:inputText value="#{row.bindings.LastUpdateBy.inputValue}"
+                                  label="#{bindings.ListaChecklistVO1.hints.LastUpdateBy.label}"
+                                  required="#{bindings.ListaChecklistVO1.hints.LastUpdateBy.mandatory}"
+                                  columns="#{bindings.ListaChecklistVO1.hints.LastUpdateBy.displayWidth}"
+                                  maximumLength="#{bindings.ListaChecklistVO1.hints.LastUpdateBy.precision}"
+                                  shortDesc="#{bindings.ListaChecklistVO1.hints.LastUpdateBy.tooltip}" id="it5">
+                        <f:validator binding="#{row.bindings.LastUpdateBy.validator}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.ListaChecklistVO1.hints.LastUpdateDate.label}" id="c13">
+                    <af:inputDate value="#{row.bindings.LastUpdateDate.inputValue}"
+                                  label="#{bindings.ListaChecklistVO1.hints.LastUpdateDate.label}"
+                                  required="#{bindings.ListaChecklistVO1.hints.LastUpdateDate.mandatory}"
+                                  columns="#{bindings.ListaChecklistVO1.hints.LastUpdateDate.displayWidth}"
+                                  shortDesc="#{bindings.ListaChecklistVO1.hints.LastUpdateDate.tooltip}" id="id1">
+                        <f:validator binding="#{row.bindings.LastUpdateDate.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.ListaChecklistVO1.hints.LastUpdateDate.format}"/>
+                    </af:inputDate>
+                </af:column>
+            </af:table>
+          </af:panelCollection>
+    </af:panelGroupLayout>
+</ui:composition>
